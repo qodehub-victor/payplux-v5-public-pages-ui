@@ -1,0 +1,11 @@
+input {
+    border-radius: 8px!important;
+    box-shadow: 0 3px 6px 0 rgba(6, 31, 60, 0.04);
+    border: solid 1px $light-periwinkle!important;
+    background-color: #ffffff!important;
+
+    &:focus {
+        box-shadow: none!important;
+        border: solid 1px $clear-blue!important;
+    }
+}

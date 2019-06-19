@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h48v48H0z"/>
+        <path fill="#F6CF44" d="M32 24h10v4H32z"/>
+        <path fill="#000" d="M37 24h5v4h-5z" opacity=".039"/>
+        <path fill="#FFB121" d="M32 28h10v4H32z"/>
+        <path fill="#000" d="M37 28h5v4h-5z" opacity=".039"/>
+        <path fill="#FFC642" d="M32 32h10v4H32z"/>
+        <path fill="#000" d="M37 32h5v4h-5z" opacity=".039"/>
+        <g>
+            <path fill="#FFB121" d="M32 36h10v4H32z"/>
+            <path fill="#000" d="M37 36h5v4h-5z" opacity=".039"/>
+        </g>
+        <g>
+            <path fill="#FFC642" d="M32 24h10v4H32z"/>
+            <path fill="#000" d="M37 24h5v4h-5z" opacity=".039"/>
+        </g>
+        <g>
+            <path fill="#FFC642" d="M32 8h10v4H32z"/>
+            <path fill="#000" d="M37 8h5v4h-5z" opacity=".039"/>
+            <path fill="#FFB121" d="M32 12h10v4H32z"/>
+            <path fill="#000" d="M37 12h5v4h-5z" opacity=".039"/>
+            <path fill="#FFC642" d="M32 16h10v4H32z"/>
+            <path fill="#000" d="M37 16h5v4h-5z" opacity=".039"/>
+            <g>
+                <path fill="#FFB121" d="M32 20h10v4H32z"/>
+                <path fill="#000" d="M37 20h5v4h-5z" opacity=".039"/>
+            </g>
+            <g>
+                <path fill="#FFC642" d="M32 24h10v4H32z"/>
+                <path fill="#000" d="M37 24h5v4h-5z" opacity=".039"/>
+            </g>
+        </g>
+        <g transform="translate(12 4)">
+            <rect width="24" height="40" fill="#2B4059" rx="2"/>
+            <rect width="20" height="30" x="2" y="3" fill="#1C8AFF" rx="1"/>
+            <rect width="6" height="3" x="9" y="35" fill="#516276" rx="1.5"/>
+        </g>
+        <g>
+            <path fill="#FFC642" d="M7 24h10v4H7z"/>
+            <path fill="#000" d="M12 24h5v4h-5z" opacity=".039"/>
+            <path fill="#FFB121" d="M7 28h10v4H7z"/>
+            <path fill="#000" d="M12 28h5v4h-5z" opacity=".039"/>
+            <path fill="#FFC642" d="M7 32h10v4H7z"/>
+            <path fill="#000" d="M12 32h5v4h-5z" opacity=".039"/>
+            <g>
+                <path fill="#FFB121" d="M7 36h10v4H7z"/>
+                <path fill="#000" d="M12 36h5v4h-5z" opacity=".039"/>
+            </g>
+            <g>
+                <path fill="#FFC642" d="M7 40h10v4H7z"/>
+                <path fill="#000" d="M12 40h5v4h-5z" opacity=".039"/>
+            </g>
+        </g>
+    </g>
+</svg>

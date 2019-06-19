@@ -1,0 +1,53 @@
+// colors
+$navy             : #061f3c;
+$slate            : #516276;
+$steel            : #768493;
+$bluey-grey       : #9ba5b1;
+$light-periwinkle : #dfe2e6;
+$clear-blue       : #1c8aff;
+$pale-grey        : #fafbfc;
+$pale-grey-two    : #f2f3f5;
+$cloudy-blue      : #c0c6ce;
+$shadow           : rgb(6, 31, 60);
+$dark-mint        : #52b875;
+$pale-red         : #e65b43;
+
+$colors: () !default;
+
+$colors: map-merge(
+    (
+        "navy": $navy,
+        "slate": $slate,
+        "steel": $steel,
+        "bluey-grey": $bluey-grey,
+        "light-periwinkle": $light-periwinkle,
+        "clear-blue": $clear-blue,
+        "pale-grey": $pale-grey,
+        "pale-grey-two": $pale-grey-two,
+        "cloudy-blue": $cloudy-blue,
+        "shadow": $shadow,
+        "dark-mint": $dark-mint,
+        "pale-red": $pale-red
+    ),
+$colors);
+
+// grids
+$grids: (
+    (name: "sm", grid: 0),
+    (name: "md", grid: 768),
+    (name: "lg", grid: 992),
+    (name: "xl", grid: 1200)
+);
+
+// font weights
+$weights: (
+    400,
+    500,
+    600,
+    700
+);
+
+// fonts
+$titillium : 'Titillium Web', sans-serif;
+$work-sans : 'Work Sans', sans-serif;
+$josefin   : 'Josefin Sans', sans-serif;

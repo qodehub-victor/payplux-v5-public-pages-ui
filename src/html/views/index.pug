@@ -1,0 +1,200 @@
+extends ../layout/index 
+
+//- define head variables
+block variables 
+    - 
+        //- for head meta data
+        var head = {
+            title: "Home - Payplux",
+            keywords: "",
+            description: ""
+        }
+
+        //- active navigation item
+        var active_nav = "Home"
+
+        //- here we are bubbles
+        var bubble_lists = [
+            {
+                image: "ux",
+                title: "Great user experience",
+                desc: "Use Payplux with ease"
+            },
+            {
+                image: "support",
+                title: "Heroic Support",
+                desc: "Have a problem? Give us a call"
+            },
+            {
+                image: "24-7",
+                title: "24/7 Automated Service",
+                desc: "Transact at any time"
+            }
+        ]
+
+        //- experience
+        var experience_bubble_lists = [
+            {
+                image: "prepaid-wallet",
+                title: "Prepaid Wallet",
+                desc: "Load your wallet ahead of time and get to place your buy order at any time, any day!"
+            },
+            {
+                image: "bulk-buy",
+                title: "Bulk Buy",
+                desc: "Buy in bulk at rates made just  for you. Continue to serve your customers with ease."
+            },
+            {
+                image: "exchange-services",
+                title: "Exchange Services",
+                desc: "Change from one crypto to another easily. Bitcoin to Ethereum or vice versa & many more!"
+            },
+            {
+                image: "prepaid-wallet",
+                title: "Buy & Pay",
+                desc: "Buy your crypto directly just by entering payment details. It’s fast and convenient."
+            },
+            {
+                image: "mobile-apps",
+                title: "Mobile Apps",
+                desc: "Perform your buy, sell & exchange transactions on the go with our Android and iOS apps!"
+            },
+            {
+                image: "ussd-apps",
+                title: "USSD Apps",
+                desc: "Buy, sell, exchange, check wallet balance, track orders, directly with a USSD Code!"
+            }
+        ]
+
+
+block body
+    #home.body
+        //- introduction section
+        section.introduction
+
+            //- container for content
+            .container.position-relative
+                .particles 
+
+                .row          
+                    //- content
+                    .col-12.col-md-6.content.d-flex.align-items-center
+                        .v-align 
+                            p.header Buy, sell & exchange cryptocurrencies
+
+                            .description 
+                                p Buy, sell and exchange cryptocurrencies with 
+                                    br 
+                                    | your mobile money directly in GHS 
+                                    img(src="images/svgs/gh-flag.svg")
+                                    br
+                                    | with ease.
+                            
+                            .get-started
+                                form
+                                    .d-flex
+                                        .form-group 
+                                            input.form-control(type="email" placeholder="Email address...")
+                                        .form-group 
+                                            button.btn.button.button-72(type="submit") Get Started
+
+
+                    //- image
+                    .col-12.col-md-6.image
+                        img.img-fluid.d-block.mr-0.ml-auto(src="images/img/masked-mark.png", alt="") 
+        
+        //- payplux is here for you
+        section.here-for-you.position-relative
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Payplux is here for you always! 
+
+                //- list of information
+                .container
+                    .bubble-lists.d-flex.justify-content-center
+                        //- looping through buuble lists
+                        each bubble in bubble_lists
+                            .bubble-list.d-flex.margin-left-sm-28.margin-right-sm-28
+                                .bubble
+                                    img(src="images/icons/" + bubble.image + ".png", alt="")
+                                .content.text-left.d-flex.align-items-center
+                                    .v-align 
+                                        p.title= bubble.title
+                                        p.desc.steel-text= bubble.desc
+
+                .table-container.w-100
+                    .container.position-relative
+                        +table()
+
+        //- experience
+
+        section.experience.swooshed.lg
+            .container 
+                .heading
+                    p.header.font-size-sm-32.font-weight-sm-500.text-center.margin-bottom-sm-16 The 
+                        span.clear-blue-text best 
+                        | experience always. You mean the most to us!
+
+                    p.text-center.steel-text.m-0 Payplux has all these features for your comfort
+
+                .row 
+                    .col-5.d-flex.align-items-center
+                        //- list of information
+                        .bubble-lists
+                            //- looping through buuble lists
+                            each bubble in experience_bubble_lists
+                                .bubble-list.d-flex.lg.margin-bottom-sm-16
+                                    .bubble.margin-right-sm-32 
+                                        img(src="images/svgs/" + bubble.image + ".svg", alt="")
+                                    .content.text-left.d-flex.align-items-center
+                                        .v-align 
+                                            p.title= bubble.title 
+                                            p.desc.steel-text= bubble.desc
+
+                    .col-7 
+                        img.exchange-service-image(src="images/img/exchange.png", alt="")
+
+        //- good news
+        section.good-news
+            .lg.swooshed
+            .container 
+                .row.good-news-row.justify-content-between
+
+                    .col-6 
+                        img.img-fluid.ml-0.mr-auto(src="images/img/referral.jpg", alt="")
+
+                    .col-5.d-flex.align-items-center 
+                        .v-align 
+                            p.header.font-size-sm-32.font-weight-sm-500.margin-bottom-sm-32 Spread the good news 
+                                br 
+                                | and 
+                                span.clear-blue-text make money 
+                                br 
+                                | doing so!
+                            p.description.steel-text.font-size-sm-20.margin-bottom-sm-32 
+                                | Our Affiliate and Referral program here at PayPlux is created to reward you for being a great friend who shows your friends the great things you discover! Who doesn’t want to be a good friend and get rewarded for it? 
+                                a.clear-blue-text(href) Check it out here.
+                            
+                            a.btn.button.button-64.px-5 I'm a good friend!
+
+                .row.perform-row.justify-content-between
+
+                    .col-5.d-flex.align-items-center 
+                        .v-align 
+                            p.header.font-size-sm-32.font-weight-sm-500.margin-bottom-sm-32 Perform your first 
+                                br 
+                                | transaction on 
+                                span.clear-blue-text PayPlux 
+                                | easily 
+                                
+                            p.description.steel-text.font-size-sm-20.margin-bottom-sm-32 
+                                | Maybe some very little thing to go here that makes sense a bit more than what I have typed.
+
+                            .steps 
+                                each step, index in ["Sign up", "Login", "Place order", "Receive order"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.step= step
+                            
+                            a.btn.button.button-64.px-5 Place first order!
+
+                    .col-6 
+                        img.img-fluid.mr-0.ml-auto(src="images/img/first-order.jpg", alt="")

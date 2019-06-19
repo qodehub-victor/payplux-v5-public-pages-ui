@@ -1,0 +1,12 @@
+html,
+body {
+    color: $navy;
+    font-family: $work-sans!important;
+
+    // line-height : 1; 
+    -webkit-font-smoothing: antialiased; 
+
+    button, input, p, div, span, a, table {
+        letter-spacing : -0.5px;
+    }
+}

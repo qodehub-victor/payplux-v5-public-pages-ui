@@ -1,0 +1,241 @@
+#home {
+    // introduction section
+    .introduction{
+        padding-top: 80px;
+        padding-bottom: 160px;
+
+        .particles {
+            width: 100%;
+            max-width: 690px;
+            min-height: 615px;
+            right: -45px;
+            top: -50px;
+            position: absolute;
+
+            background-image: url("../images/svgs/swoosh-particles.svg");
+        }
+
+        .content {
+            .header {
+                font-size: 48px;
+                font-weight: 500;
+                line-height: normal;
+                margin-bottom: 40px;
+                letter-spacing: -1.5px;
+            }
+
+            .description {
+                font-size: 20px;
+                line-height: 1.6;
+
+                img {
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                }
+            }
+
+            form {
+                .form-group:first-child {
+                    width: 100%;
+                    max-width: 360px;
+
+                    input {
+                        height: 72px;
+                        font-size: 18px;
+                        padding: 24px;
+                    }
+                }
+
+                .form-group:last-child {
+                    flex: 0 0 170px;
+                    margin-left: 16px;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .image {
+            img {
+                max-width: 545px;
+                max-height: 520px;
+            }
+        }
+    }
+
+
+    // payplux is here for you section
+    .here-for-you {
+        position: relative;
+        background-color: $pale-grey;
+        height: 600px;
+        padding: 112px 0px;
+
+        .table-container {
+            position: absolute;
+            bottom: -235px;
+
+            .table-shadow {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+
+        .bubble-lists {
+            margin-top: 80px;
+        }
+    }
+
+    // experience
+    .experience {
+        overflow: hidden;
+        padding-top: 400px;
+        padding-bottom: 80px;
+
+        .heading {
+            margin-bottom: 80px;
+        }
+
+        .exchange-service-image {
+            height: 1000px;
+        }
+    }
+
+    // good news section
+    .good-news {
+        position: relative;
+        padding: 128px 0px;
+        background-image: linear-gradient(to bottom, $pale-grey, rgba(247, 248, 250, 0));
+
+        .header {
+            line-height: 1.29;
+        }
+
+        .description {
+            line-height: 1.5;
+            color: $steel;
+            font-size: 20px;
+        }
+
+        .good-news-row {
+            margin-bottom: 304px;
+        }
+
+        .steps {
+            margin-bottom: 40px;
+
+            .number {
+                line-height: 28px;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: solid 2px #e4f1ff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin-right: 16px;
+                color: $steel;
+            }
+
+            .step {
+                font-size: 18px;
+                color: $steel;
+                line-height: 30px;
+            }
+        }
+
+        .swooshed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .bubble-lists {
+        justify-content: center;
+
+        .bubble-list {
+            // flex: 0 0 250px;
+
+            .bubble {
+                background-color: #fff;
+                box-shadow: 0 3px 6px 0 rgba($color: $shadow, $alpha: 0.04);
+                border-radius: 50%;
+                flex: 0 0 56px;
+                height: 56px;
+                width: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .content {
+
+                .title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 1;
+                    margin-bottom: 8px;
+                }
+                .desc {
+                    font-size: 14px;
+                    line-height: 1;
+                    margin: 0px;
+                }
+            }
+
+
+            &.lg {
+                padding: 16px;
+                // flex: 0 0 auto;
+
+                .bubble {
+                    width: 72px;
+                    height: 72px;
+                    margin-right: 32px;
+                    flex: 0 0 72px;
+                
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+
+                .content {
+                    
+                    .title {
+                        font-size: 18px;
+                    }
+
+                    .desc {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+
+                &:hover{
+                    background-color: $clear-blue;
+                    border-radius: 4px;
+                    box-shadow: 0 9px 10px 2px rgba($color: $shadow, $alpha: 0.08);
+                    cursor: pointer;
+
+                    .title,
+                    .desc {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

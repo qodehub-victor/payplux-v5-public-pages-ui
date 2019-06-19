@@ -1,0 +1,162 @@
+mixin table()
+    -
+        //- currency table
+        var data = [
+            {
+                product: {
+                    icon: "btc.svg",
+                    name: "Bitcoin",
+                    abbr: "btc"
+                },
+                price: {
+                    amount: "5,120",
+                    currency: "USD"
+                },
+                change: {
+                    type: "up",
+                    percentage: "3.43%"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            },
+
+            {
+                product: {
+                    icon: "bch.svg",
+                    name: "Bitcoin Cash",
+                    abbr: "bhc"
+                },
+                price: {
+                    amount: '289.43',
+                    currency: "USD"
+                },
+                change: {
+                    type: "down",
+                    percentage: "1.25%"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            },
+
+            {
+                product: {
+                    icon: "eth.svg",
+                    name: "Ethereum",
+                    abbr: "ETH"
+                },
+                price: {
+                    amount: '166.29',
+                    currency: "USD"
+                },
+                change: {
+                    type: "",
+                    percentage: "0.00%"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            },
+
+            {
+                product: {
+                    icon: "btg.svg",
+                    name: "Bitcoin Gold",
+                    abbr: "BTG"
+                },
+                price: {
+                    amount: '16.85',
+                    currency: "USD"
+                },
+                change: {
+                    type: "up",
+                    percentage: "1.40%"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            },
+
+            {
+                product: {
+                    icon: "eos.svg",
+                    name: "EOS",
+                    abbr: "EOS"
+                },
+                price: {
+                    amount: '4.83',
+                    currency: "USD"
+                },
+                change: {
+                    type: "down",
+                    percentage: "2.42%"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            },
+
+            {
+                product: {
+                    icon: "omg.svg",
+                    name: "OmiseGO",
+                    abbr: "OMG"
+                },
+                price: {
+                    amount: '1.69',
+                    currency: "USD"
+                },
+                change: {
+                    type: "down",
+                    percentage: "0.34"
+                },
+                chart: "",
+                actions: [
+                    "BUY", "SELL"
+                ]
+            }
+        ]
+        
+    .table-shadow
+        table.table
+            thead
+                tr 
+                    th.product PRODUCT 
+                    th.price PRICE
+                    th.change CHANGE
+                    th.chart CHART
+                    th.actions ACTIONS 
+
+            tbody 
+                each datum in data 
+                    tr 
+                        td.product
+                            .d-flex
+                                img(src= 'images/currencies/' + datum.product.icon, alt="")
+                                .product-name 
+                                    p.name= datum.product.name
+                                    p.abbr= datum.product.abbr
+                        td.price
+                            .d-flex.justify-content-end
+                                span.amount= datum.price.amount 
+                                span.currency= datum.price.currency
+                        td.change(class= datum.change.type)
+                            .d-flex
+                                if datum.change.type == 'up'
+                                    i.material-icons arrow_upward
+                                else 
+                                    i.material-icons arrow_downward 
+
+                                span= datum.change.percentage
+
+                        td.chart 
+                        td.actions
+                            .d-flex.w-100 
+                                each button in datum.actions 
+                                    button.btn.button.button-32.font-size-sm-12.font-weight-sm-600.px-3= button

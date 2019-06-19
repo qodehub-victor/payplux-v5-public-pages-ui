@@ -1,0 +1,159 @@
+-
+    var footer = [
+        {
+            header: "Company",
+            links: [
+                {
+                    name: "About",
+                    link: ""
+                },
+
+                {
+                    name: "Support",
+                    link: ""
+                },
+                {
+                    name: "Status",
+                    link: ""
+                },
+                {
+                    name: "Affiliate Program",
+                    link: ""
+                },
+                {
+                    name: "Legal",
+                    link: ""
+                },
+                {
+                    name: "Compliance",
+                    link: ""
+                }
+            ]
+        },
+
+        {
+            header: "Buy",
+            links: [
+                {
+                    name: "Buy Bitcoin in Ghana",
+                    link: ""
+                },
+                {
+                    name: "Buy Ethereum in Ghana",
+                    link: ""
+                },
+                {
+                    name: "Buy Perfect Money in Ghana",
+                    link: ""
+                },
+                {
+                    name: "Buy Litecoin in Ghana",
+                    link: ""
+                }
+            ]
+        },
+
+        {
+            header: "Cypto Academy",
+            links: [
+                {
+                    name: "What is Bitcoin?",
+                    link: ""
+                },
+                {
+                    name: "What is Ethereum?",
+                    link: ""
+                },
+                {
+                    name: "What is Perfect Money?",
+                    link: ""
+                },
+                {
+                    name: "What is Litecoin?",
+                    link: ""
+                },
+                {
+                    name: "What is Bitcoin Wallet?",
+                    link: ""
+                }
+            ]
+        },
+
+        {
+            header: "Social",
+            links: [
+                {
+                    name: "Facebook",
+                    link: ""
+                },
+
+                {
+                    name: "Twitter",
+                    link: ""
+                },
+
+                {
+                    name: "Instagram",
+                    link: ""
+                }
+            ]
+        },
+    ]
+
+.footer
+    //- social
+    section.social.clear-blue-bg.position-relative
+        //- background for icons
+        .iconic-bg.w-100.position-absolute.h-100
+
+        //- content container
+        .container
+            p.text-center.font-size-sm-32.font-weight-sm-500.pale-grey-text.mb-1 Need more information?
+            p.text-center.pale-grey-text.font-size-sm-18.m-0 Contact us directly on WhatsApp, Messenger, Live Chat 
+
+            //- social media icons
+            .icons.d-flex.justify-content-center 
+                img(src="images/icons/whatsapp.png", alt="").mr-5
+                img(src="images/icons/messenger.png", alt="").mr-5
+                img(src="images/icons/livechat.png", alt="")
+
+    //- try it yourself
+    section.try.sm.swooshed
+        .container
+            .row 
+                .col-12 
+                    p.margin-bottom-sm-24.font-size-sm-24 Try Payplux now 
+
+            .row 
+                .col-8
+                    p.font-size-sm-48.font-weight-sm-500.content.m-0 Perform your first 
+                        br 
+                        | transaction on 
+                        span.clear-blue-text PayPlux 
+                        | now
+
+                .col-4.d-flex.align-items-center.justify-content-end 
+                    .v-align
+                        button.btn.button.button-72.px-5 Get Started
+
+    //- actual footer
+    footer 
+        .container
+            .grid.d-flex.justify-content-between
+                .logo-section
+                    a(href="").d-block.margin-bottom-sm-24
+                        img(src="images/svgs/logo.svg", alt="")
+
+                    p.steel-text.margin-bottom-sm-8 (+233) 054 25 700 75
+                    p.steel-text.m-0 ©2019 PayPlux.
+
+                .content-section.d-flex 
+                    each content in footer 
+                        .content 
+                            p.header= content.header
+
+                            .content-body 
+                                each link in content.links
+                                    a(href= link.link)= link.name  
+
+

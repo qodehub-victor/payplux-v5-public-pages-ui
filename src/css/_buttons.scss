@@ -1,0 +1,27 @@
+$min-height: 32;
+$max-height: 72;
+
+.button {
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    color: #fff!important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: $clear-blue;
+}
+
+@mixin button($height)
+{
+    .button-#{$height}{
+        line-height: #{$height}px;
+        height: #{$height}px;
+    }
+}
+
+@for $height from $min-height through $max-height {
+    @if ($height % 8 == 0) {
+        @include button($height)
+    }
+}
+        

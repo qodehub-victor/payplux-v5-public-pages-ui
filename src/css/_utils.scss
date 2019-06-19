@@ -1,0 +1,86 @@
+
+// font sizes
+@each $grid in $grids{
+    $i: 12;
+    $grid-name: map-get($map: $grid, $key: name);
+    $grid-numb: map-get($map: $grid, $key: grid);
+
+    @media (min-width: #{$grid-numb}px){
+        @while $i < 65 {
+            .font-size-#{$grid-name}-#{$i} {
+                font-size: #{$i}px;
+            }
+            $i: $i + 4;
+        }
+    }
+}
+
+// font weight
+@each $grid in $grids {
+    $grid-name: map-get($map: $grid, $key: name);
+    $grid-numb: map-get($map: $grid, $key: grid);
+
+    @media (min-width: #{$grid-numb}px){
+        @each $weight in $weights {
+            .font-weight-#{$grid-name}-#{$weight} {
+                font-weight: #{$weight};
+            }
+        }
+    }
+}
+
+// colors
+@each $name, $color in $colors {
+    .#{$name}-bg {
+        background-color: $color;
+    }
+
+    .#{$name}-text {
+        color: $color;
+    }
+}
+
+// margins and paddings
+@each $grid in $grids{
+    $j: 8;
+    $grid-name: map-get($map: $grid, $key: name);
+    $grid-numb: map-get($map: $grid, $key: grid);
+
+    @media (min-width: #{$grid-numb}px){
+        @while $j < 65 {
+            .margin-top-#{$grid-name}-#{$j} {
+                margin-top: #{$j}px;
+            }
+
+            .margin-right-#{$grid-name}-#{$j} {
+                margin-right: #{$j}px;
+            }
+
+            .margin-bottom-#{$grid-name}-#{$j} {
+                margin-bottom: #{$j}px;
+            }
+
+            .margin-left-#{$grid-name}-#{$j} {
+                margin-left: #{$j}px;
+            }
+
+            .padding-top-#{$grid-name}-#{$j} {
+                padding-top: #{$j}px;
+            }
+
+            .padding-right-#{$grid-name}-#{$j} {
+                padding-right: #{$j}px;
+            }
+
+            .padding-bottom-#{$grid-name}-#{$j} {
+                padding-bottom: #{$j}px;
+            }
+
+            .padding-left-#{$grid-name}-#{$j} {
+                padding-left: #{$j}px;
+            }
+
+            $j: $j + 4;
+        }
+    }
+}

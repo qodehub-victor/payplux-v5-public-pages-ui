@@ -1,0 +1,39 @@
+block variables
+
+//- include base mixin
+include ../mixins/base 
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        base(href="/")
+
+        //- meta data
+        meta(charset="UTF-8")
+        //- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="keywords" content= head.keywords)
+        meta(name="description" content= head.description)
+
+        //- include fonts
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700|Work+Sans:400,500,600,800|Josefin+Sans:400,600,700")
+        //- include icons
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        //- include css
+        link(rel="stylesheet", href="css/payplux.css")
+        //- include js
+        script(src="js/payplux.js")
+
+        //- title
+        title= head.title
+    body
+        block nav
+            //- navigation 
+            +navbar()
+        
+        //- body content
+        block body
+            //- yield
+
+        block footer 
+            include foot

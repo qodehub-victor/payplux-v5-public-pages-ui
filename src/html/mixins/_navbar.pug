@@ -1,0 +1,60 @@
+mixin navbar()
+    //- define nav links
+    -
+        var navs =  [
+                        {
+                            name: "Home", 
+                            href: "/"
+                        }, 
+                        {
+                            name: "About", 
+                            href: "about.html"
+                        }, 
+                        {
+                            name: "Buy", 
+                            href: "buy.html"
+                        }, 
+                        {
+                            name: "Sell", 
+                            href: "sell.html"
+                        }, 
+                        {
+                            name: "Exchange",
+                            href: "exchange.html"
+                        },
+                        {
+                            name: "Blog",
+                            href: "blog.html"
+                        },
+                        {
+                            name: "Support",
+                            href: "support.html"
+                        }
+                    ]
+
+    //- navbar fixed to top
+    nav.navbar.navbar-expand-lg.fixed-top.navbar-light
+        //- containerize navbar
+        .container
+            //- logo
+            a.navbar-brand(href)
+                img(src="images/svgs/logo.svg", alt="")
+
+            //- buttons to collapse navbar
+            button.navbar-toggler(type="button", data-toggle="collapse" data-target="#navigation" aria-controls="navigation")
+                span.navbar-toggler-icon 
+
+            //- collapse nav items near logo
+            .collapse.navbar-collapse#navigation 
+                //- left navigation items
+                ul.navbar-nav.mr-auto
+                    each nav, index in navs
+                        li.nav-item(class= active_nav == nav.name ? "active" : "") 
+                            a.nav-link(href= nav.href)= nav.name
+                
+                //- right navigation items
+                ul.navbar-nav.nav-right
+                    li.nav-item.login
+                        a.nav-link(href= "") Login 
+                    li.nav-item
+                        a.btn.button.button-48.px-4 Get Started

@@ -1,0 +1,172 @@
+.table-shadow {
+    box-shadow: 0 2px 6px 1px rgba($color: $shadow, $alpha: 0.12);
+    height: 470px;
+    overflow-y: auto;
+}
+.table {
+    position: relative;
+
+    // table header and table data
+    th,
+    td {
+        border: none!important;
+        padding: 0px 24px;
+
+        &.number,
+        &.price{
+            text-align: right;
+        }
+    }
+
+    // table head
+    thead {
+        th {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $cloudy-blue;
+            line-height: 64px;
+            position: sticky;
+            top: 0;
+            background-color: $pale-grey;
+            z-index: 10;
+        }
+    }    
+
+    // table body
+    tbody {
+        background-color: #fff;
+        position: relative;
+
+        // before and after pseudo elements
+        &::before,
+        &::after {
+            content: ' ';
+            display: block;
+            height: calc(100% - 64px);
+            width: 24px;
+            position: absolute;
+            bottom: 0;
+            background: #fff;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+
+        tr {
+            td {
+                padding-top: 24px;
+                padding-bottom: 24px;
+                border-top: solid 1px $pale-grey-two!important;
+                height: 80px;
+                width: 25%;
+
+                // table product
+                &.product {
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        display: block;
+                        margin-right: 24px;
+                    }
+
+                    .product-name{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            margin: 0px;
+                        }
+
+                        .name {
+                            margin-right: 8px;
+                            font-size: 18px;
+                        }
+
+                        .abbr {
+                            font-size: 12px;
+                            color: $bluey-grey;
+                            text-transform: uppercase;
+                            margin-top: 3px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                // price
+                &.price {
+                    font-family: $titillium;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    .amount {
+                      margin-right: 4px;  
+                    }
+
+                    .amount,
+                    .currency {
+                        line-height: 32px;
+                    }
+                }
+
+                // change
+                &.change {
+                    i {
+                        font-size: 18px;
+                    }
+
+                    span {
+                        font-size: 18px;
+                        font-family: $titillium;
+                    }
+
+                    i,
+                    span {
+                        line-height: 32px;
+                        color: $bluey-grey;
+                    }
+
+                    &.up {
+                        i, span {
+                            color: $dark-mint;
+                        }
+                    }
+
+                    &.down {
+                        i, span {
+                            color: $pale-red;
+                        }
+                    }
+                }
+
+                // actions
+                &.actions {
+                    button {
+                        border-radius: 4px;
+                        border: solid 1.5px $pale-grey-two;
+                        background: #fff;
+                        color: $navy!important;
+                        margin-right: 16px;
+                    }
+                }
+            }
+
+            &:first-child{
+                td {
+                    border-top: none!important;
+                }
+            }
+        }
+        
+    }
+
+
+    
+}

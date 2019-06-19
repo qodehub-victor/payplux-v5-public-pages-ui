@@ -1,0 +1,26 @@
+// import partials
+@import 'variables';
+@import 'reset';
+@import 'buttons';
+@import 'form';
+@import 'table';
+@import 'utils';
+
+// media queries partials
+@import "sm";
+
+@media (min-width: 768px){
+    @import "md";
+}
+
+@media (min-width: 992px){
+    @import "lg";
+}
+
+@media(min-width: 1366px){
+    @import "xl";
+}
+
+
+// pages
+@import "pages/home"

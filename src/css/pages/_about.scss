@@ -1,3 +1,155 @@
 #about {
+    .introduction{
+
+        padding:96px 0px;
+
+        .header{
+            font-weight:600;
+            font-size: 216px;
+            line-height:0.97;
+            letter-spacing: -4.5px;
+            
+        }
+        .content{
+            font-size:20px;
+            line-height: 1.9;
+            color: $steel;
+        
+        }
+    }
+
+    .numbers{
+        background-color: $clear-blue;
+        border-radius: 16px;
+        width: 1040px;
+        height: 184px;
+        box-shadow: 0 8px 8px 0 rgba(6, 31, 60, 0.08);
+        position:relative;
+        
+
+
+        .description{
+            font-size: 16px;
+            line-height:1.5;
+            color:rgba(255, 255, 255, 0.5);
+            text-align:center;
+
+        }
+
+        .num{
+            font-size: 40px;
+            font-weight: 496;            
+            letter-spacing: -1.52px;
+            color: $white;
+        
+            }
+        }
+    
+
+    //loyal customers section
+    .loyal-customers{
+        margin-top:-96px;
+        background-color: $pale-grey;
+        padding:260px 0px 136px 0px;    
+       
+        .header{
+        line-height: 1.29;
+        letter-spacing: -1.18px;
+        color: $navy;
+            }
+        
+        .decription{ 
+            line-height: 1.5;
+            color: $steel;
+        }
+        
+
+        .ticks{
+            margin-bottom: 40px;
+    
+            .number {
+                line-height: 28px;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: solid 2px #e4f1ff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin-right: 16px;
+                color: $steel;
+            }
+    
+            .tick {
+                font-size: 18px;
+                color: $steel;
+                line-height: 30px;
+            }
+        }
+
+        .picture {
+            background-color:$navy;
+
+            img {
+                position: absolute;;
+                object-fit:contain;
+            }
+           
+        }
+    }
+
+
+    // press assets section
+    .press-assests{
+        padding: 248px 0px 342px 0px; 
+        .swooshed{
+            width:100%;
+            height:100%;
+        }
+
+            
+        .description{
+            font-size: 20px;
+            line-height: 1.7;
+            text-align: center;
+            
+        }
+        .header-2{
+            padding: 240px 0px 72px 0px;
+        }
+
+        // for social media links 
+        .socials {
+            .social {
+                padding: 10px 16px;
+                border-radius: 8px;
+                height: 60px;
+                width: 220px;
+
+                .img{
+                    margin-right: 16px;
+                }
+                .content{
+                    font-size: 16px;
+                    color:$white;
+                    line-height:1.5;
+
+                }
+
+                &.facebook {
+                    background-color: #1578f2;
+                }
+
+                &.instagram {
+                    background-image: linear-gradient(124deg, #b900b4, #f50000);
+                }
+                
+                &.twitter{
+                    background-color: #1da1f2;
+                }
+            }
+        }
+    }
+    
 
 }

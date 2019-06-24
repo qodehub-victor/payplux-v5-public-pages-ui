@@ -14,7 +14,117 @@ block variables
         var active_nav = "About"
 
 
+        //- connect with us
+        var socials = [
+            {
+                image: "facebook",
+                name: "Facebook"
+            },
+            {
+                image: "twitter",
+                name: "Twitter"
+            },
+
+            {
+                image: "instagram",
+                name: "Instagram"
+            }
+        ]
+
+
 block body
     #about.body
+        //- introduction section
+        section.introduction
+            //-container for content
+            .container.introduction.swooshed
+                .row
+                    //- content
+                    .col-12.col-md-7.d-flex.align-items-center
+                        p.header Our 
+                            span.clear-blue-text Story
 
-    
+                    .col-12.col-md-5.content 
+                        p.mb-5 PayPlux is one of the oldest ecurrency exchangers in Ghana. Established 10 years ago, our focus hasn’t changed. Our mission and focus is to make digital currency (both cryptos & non-cryptos) accessible, especially in the African regions. We want to empower you to participate in the ever growing and evolving digital payments and transactions landscape.
+
+                        p.m-0 Our currency exchange allows users in Ghana and beyond to buy, sell and exchange various digital currencies such as Bitcoin, Litecoin, Ethereum and Perfect Money. Our diverse payment methods allow you to carry out your buy, sell or exchange transactions using Mobile Money, which is one of the most used payment systems in our part of the world.
+
+
+        section.numbers.mx-auto
+            //- container for content
+            .container.numbers.position.relative
+                .row
+                    .col-4.d-flex.align-items-center.mt-4.pl-5
+                        .v-align
+                            p.num 85,000+
+                            p.description customers served
+                    
+                    .col-4.d-flex.align-items-center.mt-4
+                        .v-align
+                            p.num 1,285,000+
+                            p.description orders processed
+
+                    .col-4.d-flex.align-items-center.mt-4
+                        .v-align
+                            p.num $8,500,000+
+                            p.description worth of currency exchanged
+
+        //- loyal customers
+        section.loyal-customers
+            //- container for content
+            .container.loyal-customer
+                .row.justify-content-between
+                    .col-12.col-md-7.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500.mb-4 Loyal 
+                                span.clear-blue-text Customers 
+                                br
+                                | Deserve Great 
+                                br
+                                | Treatment
+                                p.description.steel-text.font-size-sm-20.margin-bottom-sm-32  Over our decade of operating, we’ve had customers who have stuck with us all these years. Whether you just joined us or you’ve been with us since day one, there’s something for you. Our rewards are in different categories:
+                                    
+                            .ticks 
+                                each tick, index in ["Discount Rates", "Discount Coupons", "Prepaid Top Up Coupons", "Souvenirs", "Gifts"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.img.number(src="images/icons/check.png", alt="")= index + 1
+                                        span.tick= tick
+
+                    .col-12.col-md-5.d-flex.align-items-center.picture
+                        img.img-fluid.pb-5(src="images/img/loyal.png", alt="")
+
+
+        //- section press assets
+        section.press-assests.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.mb-2.text-center Press Assets
+                p.description.steel-text.m-0 We want you to be able to appropriately represent us in that article or feature you want to 
+                    br
+                    | write about us. For our partners and those who want us to sponsor any events, you’ll find all 
+                    br
+                    | the media kit in here. Contact us on any  of our channels if you need something more.
+                    br
+                    |
+                    a.clear-blue-text(href).pt-4 Get Press Kit 
+
+                p.header-2.font-size-sm-32.font-weight-sm-500.text-center
+                    span.clear-blue-text Connect 
+                    |with us on Social Media
+
+            .container
+                .row.d-flex.justify-content-center
+                    .col-12 
+                    //- list of information
+                    .socials.d-flex.justify-content-center
+                        //- looping through social-media lists
+                        each social in socials
+                            .social(class= social.image).d-flex.margin-right-sm-32
+                                .img
+                                    img(src="images/icons/" + social.image + ".png", alt="")
+                                .content                                 
+                                    p= social.name
+
+                            
+                                    
+
+                                

@@ -14,5 +14,166 @@ block variables
         var active_nav = "Buy"
 
 
+        //- experience-1
+        var payment_option_one = [
+            {
+                image: "prepaid-wallet",
+                title: "From your PayPlux Prepaid Wallet",
+                desc: "Preload your PayPlux prepaid wallet with any amount and buy instantly from there when you need any digital currency."
+            },
+            {
+                image: "mobile-money",
+                title: "With Mobile Money on all Networks",
+                desc: "Place your order and make payments by sending the money from your mobile money on any network directly to PayPlux to complete your order."
+            },
+            {
+                image: "mobile-payment",
+                title: "Directly with USSD",
+                desc: "Dial our PayPlux USSD app code and follow the options to make your order and get it delivered directly to you."
+            }           
+        ]
+
+         //- experience-2
+        var payment_option_two = [
+            {
+                image: "bank-deposit",
+                title: "Bank Payments",
+                desc: "For amounts beyond GHSxxxxxx, fill a KYC form and get the bank details for PayPlux to make your payments directly. You receive your order once payment has been confirmed successfully."
+            },
+            {
+                image: "247",
+                title: "Automatic 24/7 payments",
+                desc: "Place your orders and make payments with our third party Slydepay and Hubtel apps easily. Your buy order is processed instantly no matter the time of day."
+            }
+                 
+        ]
+
+
+
 block body
     #buy.body
+        //- introduction section
+        section.introduction
+            //- container for content
+            .container
+                .row          
+                    //- content
+                    .col-7.content.d-flex.align-items-center
+                        .v-align 
+                            p.header Buy your Bitcoin, Perfect
+                                br
+                                | Money, Ethereum, Litecoin
+                                br
+                                | in Ghana easily
+                                .buy-now
+                                    form
+                                        .d-flex
+                                            .form-group 
+                                                input.form-control(type="email" placeholder="Email address...")
+                                            .form-group 
+                                                button.btn.button.button-72(type="submit") Buy Now!
+
+                    .col-5.d-flex.align-items-center                 
+                        img.buy-pay-image(src="images/img/buy-pay.png", alt="")
+        //-sell on pay plux section
+        section.sell-payplux
+            .container
+                .v-align
+                    //- img.img-fluid(src="images/icons/help.png", alt="")
+                    p.header.font-weight-sm-500.text-center.pt-4 Buy on PayPlux
+                    p.description.text-center.m-0 To sell on PayPlux means simply exchange your digital currency of choice for 
+                        br
+                        |GHS, ie bitcoin, perfect money, ethereum, litecoin. You can also call it
+                        br
+                        | liquidating your digital currency for cash.
+
+        //-section what-to-buy-on-payplux
+        section.can-buy
+            .container
+                .row.justify-content-between
+                    .col-6.d-flex.align-items-center.picture
+                        img.img-fluid(src="images/img/group-16.png", alt="")
+                    
+                    .col-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500 What Can I 
+                                span.clear-blue-text Buy 
+                                | on 
+                                br
+                                | PayPlux?
+                            p.description.steel-text.font-size-sm-20 PayPlux is a digital currency exchange that allows you to buy digital currencies including both crypto and non crypto assets. We have in stock:
+
+                            .ticks 
+                                each tick, index in ["Bitcoin", "Perfect Money", "Litecoin", "Ethereum"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.tick= tick
+        
+        //-section payment options
+        section.payment.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Payment options 
+                p.description.text-center.steel-text Buying from PayPlux can be done in various ways:
+            .container    
+                .row.justify-content-between
+                    .col-6.d-flex.align-items-center
+                        //- list of information
+                        .bubble-listss
+                            //- looping through payment list
+                            each bubble in payment_option_one
+                                .bubble-list.d-flex.margin-bottom-sm-16
+                                    .bubble.margin-top-sm-64                                   
+                                        img(src="images/svgs/" + bubble.image + ".svg", alt="")
+
+                                .content.text-left.d-flex.align-items-center                                    
+                                    .bubble-list.d-flex.lg.margin-bottom-sm-64
+                                        .v-align 
+                                            p.title= bubble.title 
+                                            p.desc.steel-text= bubble.desc
+
+
+                    .col-6.d-flex.align-items-center
+                        //- list of information
+                        .bubble-lists
+                            //- looping through payment list                            
+                            each bubble in payment_option_two
+                                .bubble-list.d-flex.margin-botttom-sm-16
+                                    .bubble.margin-top-sm-64                       
+                                        img(src="images/svgs/" + bubble.image + ".svg", alt="")
+
+                                .content.text-left.d-flex.align-items-center
+                                    .bubble-list.d-flex.lg.margin-bottom-sm-64
+                                        .v-align
+                                            p.title= bubble.title 
+                                            p.desc.steel-text= bubble.desc
+        
+        //- the process section
+        section.process
+            .container
+                .row.justify-content-between
+                    .col-12.col-md-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500.mb-4 The Process
+                            p.description.steel-text.font-size-sm-20 Our process is very simple and easy to use.
+
+                            .steps 
+                                each step, index in ["Choose digital currency to buy", "Complete the order details: amount to purchase, priority fees, etc.", "Choose preferred payment method", "Complete your order and wait for your account to be credited"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.step= step   
+
+                    .col-12.col-md-6.d-flex.align-items-center  
+                        img.circle-pattern.img-fluid(src="images/img/circle-pattern.png", alt="")  
+                        img.buy(src="images/img/buy.png", alt="")
+                        
+        
+
+           
+        //-section place your  buy order
+        section.place-buy-order.lg.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Place your buy order right away!
+
+            .table-container.w-100
+                    .container.position-relative
+                        +table() 

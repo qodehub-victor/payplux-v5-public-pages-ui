@@ -36,17 +36,8 @@
      
         .buy-pay-image{
             background-color: #1c8aff;
-            padding:28px 0px 0px 28px;
-            .table-container {
-                position: absolute;
-                bottom: -235px;
-    
-                .table-shadow {
-                    margin-left: 40px;
-                    margin-right: 40px;
-                }
-            }
-                
+            padding:28px 0px 0px 24px;
+              
                 }               
         
             
@@ -59,6 +50,7 @@
     // section sell on payplux  
     .sell-payplux{
         background-color: $navy;
+        padding: 94px 0px 92px 0px;
       
         
         .header{                          
@@ -69,7 +61,7 @@
         .description{               
                 line-height: 1.75; 
                 color:$steel;
-                padding:0px 0px 64px 0px;
+             
                 font-size:16px;
                                             
         }

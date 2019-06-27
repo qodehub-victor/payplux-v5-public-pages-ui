@@ -16,3 +16,84 @@ block variables
 
 block body
     #exchange.body
+        //- introduction section
+        section.introduction
+            //- container for content
+            .container
+                .row          
+                    //- content
+                    .col-7.content.d-flex.align-items-center
+                        .v-align 
+                            p.header Exchange from one crypto
+                                br
+                                | to the other
+                                .exchange-now
+                                    form
+                                        .d-flex
+                                            .form-group 
+                                                input.form-control(type="email" placeholder="Email address...")
+                                            .form-group 
+                                                button.btn.button.button-72(type="submit") Exchange Now!
+
+                    .col-5.d-flex.align-items-center                 
+                        img.exchange-image(src="images/img/exchange.png", alt="")
+        
+        
+        //-exchange on pay plux section
+        section.exchange-payplux
+            .container
+                .v-align
+                    p.header.font-weight-sm-500.text-center.pt-4 Exchange on PayPlux
+                    p.description.text-center.m-0 Exchange means to switch one crypto for the other. So you have bitcoin, but
+                        br
+                        | want ethereum or vice versa? Just exchange!
+        
+        //-section what-to exchange-on-payplux
+        section.can-exchange
+            .container
+                .row.justify-content-between
+                    .col-6.d-flex.align-items-center.picture
+                        img.img-fluid(src="images/img/group-16.png", alt="")
+                    
+                    .col-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500 What Can I 
+                                span.clear-blue-text Exchange
+                                | on 
+                                br
+                                | PayPlux?
+                            p.description.steel-text.font-size-sm-20 PayPlux is a digital currency exchange that allows you to exchange one crypto for the other. You can exchange:
+                            .ticks 
+                                each tick, index in ["Bitcoin", "Perfect Money", "Litecoin", "Ethereum"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.tick= tick
+        //- the process section
+        section.process
+            .container
+                .row.justify-content-between
+                    .col-12.col-md-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500.mb-4 The Process
+                            p.description.steel-text.font-size-sm-20 Changing one crypto for the other is very simple.
+
+                            .steps 
+                                each step, index in ["Choose the crypto you are exchanging and the amount", "Choose the destination address of the crypto you want", "Add a refund address in case there’s need for it", "Confirm exchange and wait for your order to be received"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.step= step 
+                            p.description.steel-text.font-size-sm-20 Visit the
+                                span.clear-blue-text knowledge base 
+                                | for further details and FAQs on exchanging on PayPlux.  
+
+                    .col-12.col-md-6.d-flex.align-items-center  
+                        img.circle-pattern.img-fluid(src="images/img/circle-pattern.png", alt="")  
+                        img.group-24(src="images/img/group-24.png", alt="")
+
+
+        //-section start exchanging now
+        section.start-exchange.lg.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Start exchanging now!
+                    .container.position-relative
+                        +tableExchange() 

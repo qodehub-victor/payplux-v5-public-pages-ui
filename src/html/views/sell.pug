@@ -14,5 +14,158 @@ block variables
         var active_nav = "Sell"
 
 
+        //- payment options-1
+        var payment_option_one = [
+            {
+                image: "prepaid-wallet",
+                title: "PayPlux Withdrawal Wallet",
+                desc: "Choose to have your money kept in your withdrawal wallet for later withdrawal"
+            },
+            {
+                image: "mobile-money",
+                title: "With Mobile Money on all Networks",
+                desc: "Send your money directly to your mobile money wallet on all networks."
+            }
+        ]
+
+
+         //- payment options-2
+        var payment_option_two = [
+            {
+                image: "bank-deposit",
+                title: "Bank Payments",
+                desc: "For amounts beyond GHSxxxxxx, fill a KYC form and leave your bank details for PayPlux to make you payments directly. You receive your money once your digital currency has been received by us."
+            }
+        ]
+
 block body
     #sell.body
+        //- introduction section
+        section.introduction
+            //- container for content
+            .container
+                .row          
+                    //- content
+                    .col-7.content.d-flex.align-items-center
+                        .v-align 
+                            p.header Sell your Bitcoin, Perfect 
+                                br
+                                |  Money, Ethereum, Litecoin
+                                br
+                                | in Ghana easily
+                                .sell-now
+                                    form
+                                        .d-flex
+                                            .form-group 
+                                                input.form-control(type="email" placeholder="Email address...")
+                                            .form-group 
+                                                button.btn.button.button-72(type="submit") Sell Now!
+
+                    .col-5.d-flex.align-items-center                 
+                        img.exchange-image(src="images/img/sell.png", alt="")
+        
+        //- sell on pay plux section
+        section.sell-payplux
+            .container
+                .v-align
+                    
+                    p.header.font-weight-sm-500.text-center.pt-4 Sell on PayPlux
+                    p.description.text-center.m-0 To sell on PayPlux means simply exchange your digital currency of choice for  
+                        br
+                        | GHS, ie bitcoin, perfect money, ethereum, litecoin. You can also call it
+                        br
+                        | liquidating your digital currency for cash.
+
+        
+        //-section what-to-buy-on-payplux
+        section.can-sell
+            .container
+                .row.justify-content-between
+                    .col-6.d-flex.align-items-center.picture
+                        img.img-fluid(src="images/img/group-16.png", alt="")
+                    
+                    .col-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500 What Can I 
+                                span.clear-blue-text Sell 
+                                | on 
+                                br
+                                | PayPlux?
+                            p.description.steel-text.font-size-sm-20 PayPlux is a digital currency exchange that allows you to sell digital currencies including both crypto and non crypto assets. We buy from you:
+
+                            .ticks 
+                                each tick, index in ["Bitcoin", "Perfect Money", "Litecoin", "Ethereum"]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.tick= tick
+                        
+
+        //-section payment options
+        section.payment.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Getting your Cash 
+                p.description.text-center.steel-text Receiving your cash from PayPlux after selling can be done in various ways:
+            .container    
+                .row.justify-content-between
+                    .col-6.d-flex.align-items-center
+                        //- list of information
+                        .bubble-listss
+                            //- looping through payment list
+                            each bubble in payment_option_one
+                                .bubble-list.d-flex.margin-bottom-sm-16
+                                    .bubble.margin-top-sm-64                                   
+                                        img(src="images/svgs/" + bubble.image + ".svg", alt="")
+
+                                .content.text-left.d-flex.align-items-center                                    
+                                    .bubble-list.d-flex.lg.margin-bottom-sm-64
+                                        .v-align 
+                                            p.title= bubble.title 
+                                            p.desc.steel-text= bubble.desc
+
+
+                    .col-6.d-flex.align-items-center
+                        //- list of information
+                        .bubble-lists
+                            //- looping through payment list                            
+                            each bubble in payment_option_two
+                                .bubble-list.d-flex.margin-botttom-sm-16
+                                    .bubble.margin-top-sm-64                       
+                                        img(src="images/svgs/" + bubble.image + ".svg", alt="")
+
+                                .content.text-left.d-flex.align-items-center
+                                    .bubble-list.d-flex.lg.margin-bottom-sm-64
+                                        .v-align
+                                            p.title= bubble.title 
+                                            p.desc.steel-text= bubble.desc
+
+        //- the process section
+        section.process
+            .container
+                .row.justify-content-between
+                    .col-12.col-md-6.d-flex.align-items-center
+                        .v-align
+                            p.header.font-size-sm-32.font-weight-sm-500.mb-4 The Process
+                            p.description.steel-text.font-size-sm-20 Our process is very simple and easy to use.
+                            .steps 
+                                each step, index in ["Choose digital currency to sell", "Choose amount to sell", "Choose how to receive your money", "Send the digital currency and wait for your money. You receive your money when digital currency sent has been received."]
+                                    .d-flex.margin-bottom-sm-16 
+                                        span.number= index + 1
+                                        span.step= step 
+                            p.description.steel-text.font-size-sm-20 Visit the 
+                                span.clear-blue-text how to articles 
+                                | for more detailed steps for each digital currency.  
+
+                    .col-12.col-md-6.d-flex.align-items-center  
+                        img.circle-pattern.img-fluid(src="images/img/circle-pattern.png", alt="")  
+                        img.selling(src="images/img/selling.png", alt="")
+
+        //-section got some crypto to sell?
+        section.place-buy-order.swooshed
+            .container
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Got some crypto to sell?
+
+            .table-container.w-100
+                    .container.position-relative
+                        +table() 
+
+        

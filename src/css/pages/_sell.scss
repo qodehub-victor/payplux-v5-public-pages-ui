@@ -1,3 +1,285 @@
 #sell {
+    //section introduction
+    .introduction{
+        overflow: hidden;
+        .content{
+        
+            .header{
+                font-size: 44px;
+                font-weight: 500;
+                letter-spacing: -1.52px;
+                color: $navy;
+                padding-bottom:64px;
+                
+        }
+            form{
+                .form-group:first-child {
+                    width: 100%;
+                    max-width: 360px;
+
+                    input {
+                        height: 72px;
+                        font-size: 18px;
+                        padding: 24px;
+                    }
+            }
+
+                .form-group:last-child {
+                    flex: 0 0 170px;
+                    margin-left: 16px;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+        }
+    }
+
+        
+        .exchange-image{
+            background-color: #1c8aff;
+            padding:28px 0px 28px 24px;
+            
+            }               
     
-}
+
+    }
+
+
+
+    // section sell on payplux  
+    .sell-payplux{
+        background-color: $navy;
+        padding: 94px 0px 92px 0px;
+      
+        
+        .header{                          
+            letter-spacing: -0.62px;
+            color:$white;
+            font-size:18px;
+        }
+        .description{               
+                line-height: 1.75; 
+                color:$steel;
+             
+                font-size:16px;
+                                            
+        }
+       
+        }
+    
+    //section can-buy-on payplux
+    .can-sell{
+        background-color: $pale-grey;
+        
+        img{
+            object-fit: contain;
+            padding: 232px 0px 202px 0px;
+
+        }
+        .header{
+            line-height: 1.29;
+            letter-spacing: -1.18px;
+            color: $navy;
+           
+
+        }
+        .descrption{
+            line-height: 1.29;
+        }
+
+        .ticks{
+            margin-bottom: 40px;
+    
+            .number {
+                line-height: 28px;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: solid 2px #e4f1ff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin-right: 16px;
+                color: $steel;
+            }
+    
+            .tick {
+                font-size: 18px;
+                color: $steel;
+                line-height: 30px;
+            }
+        }
+    }
+
+
+    //section payment options
+    .payment{
+     
+        padding: 144px 0px 120px 0px;
+        .description{
+            font-size: 20px;
+        }
+
+
+        //first-section(col-one) of payment options
+        .bubble-listss {
+            justify-content: center;
+                        
+            .bubble-list {
+            
+                .bubble {
+                    flex: 0 0 72px;                  
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 32px;                                  
+                    img {
+                        width: 68px;
+                        height: 68px;
+                    }
+                }
+            }
+            .content {
+
+                .bubble-list{
+
+                    .title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1;
+                        margin-bottom: 8px;
+                    
+                    }
+                    .desc {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        margin: 0px;
+                    }
+                
+                    &.lg {
+                        padding: 16px;                                                
+                        &:hover{
+                            background-color: $clear-blue;
+                            border-radius: 4px;
+                            box-shadow: 0 9px 10px 2px rgba($color: $shadow, $alpha: 0.08);
+                            cursor: pointer;
+
+                            .title,
+                            .desc {
+                                color: #fff;
+                            }
+                        }
+                    }
+            }
+            }
+        }
+    
+
+
+        //second section(col-two) of payment options
+        .bubble-lists {
+            justify-content: center;
+            padding-bottom:280px;
+
+            .bubble-list {
+            
+                .bubble {
+                    flex: 0 0 72px;                  
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 32px;
+                
+                    img {
+                        width: 68px;
+                        height: 68px;
+                    }
+                }
+            }
+            .content {
+
+                .bubble-list{
+
+                    .title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1;
+                        margin-bottom: 8px;
+                    
+                    }
+                    .desc {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        margin: 0px;
+                    }
+                
+                    &.lg {
+                        padding: 16px;                              
+                        &:hover{
+                            background-color: $clear-blue;
+                            border-radius: 4px;
+                            box-shadow: 0 9px 10px 2px rgba($color: $shadow, $alpha: 0.08);
+                            cursor: pointer;
+
+                            .title,
+                            .desc {
+                                color: #fff;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    }
+
+    // process section
+    .process{
+        background-color: $pale-grey;
+        overflow: hidden;
+    
+   
+        .header{
+            line-height: 1.29;
+        
+        }
+        .steps {
+            margin-bottom: 40px;
+
+            .number {
+                line-height: 28px;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: solid 2px #e4f1ff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin-right: 16px;
+                color: $clear-blue;
+            }
+
+            .step {
+                font-size: 18px;
+                color: $steel;
+                line-height: 30px;
+            }
+        }
+
+        .circle-pattern{
+            margin-left: 368px;               
+        }
+        .selling{
+            position: absolute;
+            margin-left:220px;
+            width: 560px;
+            height: 530px;
+        }
+    }
+    
+    //- section place your buy
+    .place-buy-order{
+        padding: 144px 0px 182px 0px; 
+    }
+        
+    }

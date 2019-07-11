@@ -11,16 +11,23 @@ $max-height: 72;
     background-color: $clear-blue;
 }
 
-@mixin button($height)
+@mixin button($height, $grid)
 {
-    .button-#{$height}{
+    .button-#{$grid}-#{$height}{
         line-height: #{$height}px;
         height: #{$height}px;
     }
 }
 
-@for $height from $min-height through $max-height {
-    @if ($height % 8 == 0) {
-        @include button($height)
+@each $grid in $grids {
+    $grid-name: map-get($map: $grid, $key: name);
+    $grid-numb: map-get($map: $grid, $key: grid);
+
+    @media (min-width: #{$grid-numb}px){
+        @for $height from $min-height through $max-height {
+            @if ($height % 8 == 0) {
+                @include button($height, $grid-name);
+            }
+        }
     }
 }

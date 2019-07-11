@@ -38,6 +38,10 @@
             padding: 0px 16px;
             transition: ease 0.25s all;
 
+            &.clear-blue-text {
+                color: $clear-blue!important;
+            }
+
             &:hover{
                 color: $clear-blue!important;
                 transition: ease 0.25s all;

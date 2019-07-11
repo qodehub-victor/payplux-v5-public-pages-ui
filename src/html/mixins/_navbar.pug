@@ -35,10 +35,17 @@ mixin navbar()
     //- navbar fixed to top
     nav.navbar.navbar-expand-lg.fixed-top.navbar-light
         //- containerize navbar
-        .container
+        .container.px-lg-0
             //- logo
             a.navbar-brand(href)
                 img(src="images/svgs/logo.svg", alt="")
+
+            //- table screen login and get started
+            ul.navbar-nav.align-items-center.ml-auto.d-none.d-md-flex.d-lg-none.flex-row
+                li.nav-item.login
+                    a.nav-link.clear-blue-text(href= "") Login 
+                li.nav-item
+                    a.btn.button.button-sm-32.button-lg-48.px-4 Get Started
 
             //- buttons to collapse navbar
             button.navbar-toggler(type="button", data-toggle="collapse" data-target="#navigation" aria-controls="navigation")
@@ -47,14 +54,14 @@ mixin navbar()
             //- collapse nav items near logo
             .collapse.navbar-collapse#navigation 
                 //- left navigation items
-                ul.navbar-nav.mr-auto
+                ul.navbar-nav
                     each nav, index in navs
                         li.nav-item(class= active_nav == nav.name ? "active" : "") 
                             a.nav-link(href= nav.href)= nav.name
                 
-                //- right navigation items
-                ul.navbar-nav.nav-right
-                    li.nav-item.login
-                        a.nav-link(href= "") Login 
-                    li.nav-item
-                        a.btn.button.button-48.px-4 Get Started
+            //- right navigation items | for computer screen
+            ul.navbar-nav.ml-auto.align-items-center.d-none.d-lg-flex.flex-row
+                li.nav-item.login
+                    a.nav-link.clear-blue-text(href= "") Login
+                li.nav-item
+                    a.btn.button.button-sm-32.button-lg-48.px-4 Get Started

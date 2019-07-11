@@ -42,9 +42,9 @@ gulp.task('pug', function() {
 gulp.task('build', gulp.parallel(['css', 'js', 'pug']));
 
 gulp.task('serve', function() {
-    sync.init({
-        server: "./dist"
-    });
+    // sync.init({
+    //     server: "./dist"
+    // });
 
     gulp.watch("./src/js/**/*.js", gulp.parallel(['js']));
     gulp.watch("./src/css/**/*.scss", gulp.parallel(["css"]));

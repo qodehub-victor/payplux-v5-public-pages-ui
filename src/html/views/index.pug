@@ -78,21 +78,18 @@ block body
 
                 .row          
                     //- content
-                    .col-12.col-md-6.content.d-flex.align-items-center
+                    .col-12.col-md-6.content.d-flex.align-items-center.p-md-0
                         .v-align 
                             p.header Buy, sell & exchange cryptocurrencies
 
                             .description
-                                p Buy, sell and exchange cryptocurrencies with 
-                                    br 
-                                    | your mobile money directly in GHS 
+                                p Buy, sell and exchange cryptocurrencies with your mobile money directly in GHS 
                                     img(src="images/svgs/gh-flag.svg")
-                                    br
                                     | with ease.
                             
                             .get-started
                                 form
-                                    .d-flex
+                                    .d-lg-flex
                                         .form-group 
                                             input.form-control(type="email" placeholder="Email address...")
                                         .form-group 
@@ -100,16 +97,16 @@ block body
 
 
                     //- image
-                    .col-12.col-md-6.image
+                    .col-12.col-md-6.image.p-md-0
                         img.img-fluid.d-md-block.mr-0.ml-auto(src="images/img/masked-mark.png", alt="") 
         
         //- payplux is here for you
         section.here-for-you.position-relative
-                p.header.font-size-sm-32.font-weight-sm-500.text-center Payplux is here for you always! 
+                p.header.font-size-sm-32.font-weight-sm-500.text-center Always here for you!
 
                 //- list of information
                 .container
-                    .bubble-lists.d-flex.justify-content-center
+                    .bubble-lists.d-lg-flex.justify-content-center
                         //- looping through buuble lists
                         each bubble in bubble_lists
                             .bubble-list.d-flex.margin-left-sm-28.margin-right-sm-28

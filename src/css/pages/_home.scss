@@ -1,17 +1,19 @@
 #home {
     // introduction section
     .introduction{
-        padding-top: 80px;
-        padding-bottom: 160px;
+        padding-top: calc(80px + 64px);
+        padding-bottom: 64px;
 
         // background particles
         .particles {
             width: 100%;
             min-height: 430px;
             position: absolute;
-
+            left: 0;
+            top: 96px;
             background-image: url("../images/svgs/swoosh-particles.svg");
-            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         .content {
@@ -65,21 +67,21 @@
     .here-for-you {
         position: relative;
         background-color: $pale-grey;
-        height: 600px;
-        padding: 112px 0px;
+        height: 680px;
+        padding: 64px 0px;
 
         .table-container {
             position: absolute;
-            bottom: -235px;
+            bottom: -278px;
 
             .table-shadow {
-                margin-left: 40px;
-                margin-right: 40px;
+                margin-left: 0px;
+                margin-right: 0px;
             }
         }
 
         .bubble-lists {
-            margin-top: 80px;
+            margin-top: 48px;
         }
     }
 
@@ -93,7 +95,7 @@
             margin-bottom: 80px;
         }
 
-        .exchange-service-image {
+        .experience-image {
             height: 1000px;
         }
     }
@@ -101,7 +103,7 @@
     // good news section
     .good-news {
         position: relative;
-        padding: 128px 0px;
+        padding: 72px 0px;
         background-image: linear-gradient(to bottom, $pale-grey, rgba(247, 248, 250, 0));
 
         .header {
@@ -115,7 +117,8 @@
         }
 
         .good-news-row {
-            margin-bottom: 304px;
+            margin-bottom: 120px;
+            flex-direction: column-reverse;
         }
 
         .steps {
@@ -153,17 +156,23 @@
 
     .bubble-lists {
         justify-content: center;
+        // align-items: flex-start;
 
         .bubble-list {
-            // flex: 0 0 250px;
+            width: 278px;
+            margin-bottom: 48px;
+
+            &:hover {
+                cursor: pointer;
+            }
 
             .bubble {
                 background-color: #fff;
                 box-shadow: 0 3px 6px 0 rgba($color: $shadow, $alpha: 0.04);
                 border-radius: 50%;
-                flex: 0 0 56px;
-                height: 56px;
-                width: 56px;
+                flex: 0 0 58px;
+                height: 58px;
+                width: 58px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -178,7 +187,7 @@
             .content {
 
                 .title {
-                    font-size: 16px;
+                    font-size: 18px;
                     font-weight: 500;
                     line-height: 1;
                     margin-bottom: 8px;
@@ -192,8 +201,7 @@
 
 
             &.lg {
-                padding: 16px;
-                // flex: 0 0 auto;
+                align-items: center;
 
                 .bubble {
                     width: 72px;
@@ -208,7 +216,9 @@
                 }
 
                 .content {
-                    
+                    max-width: 340px;
+                    text-align: center;
+
                     .title {
                         font-size: 18px;
                     }
@@ -216,18 +226,6 @@
                     .desc {
                         font-size: 16px;
                         line-height: 1.5;
-                    }
-                }
-
-                &:hover{
-                    background-color: $clear-blue;
-                    border-radius: 4px;
-                    box-shadow: 0 9px 10px 2px rgba($color: $shadow, $alpha: 0.08);
-                    cursor: pointer;
-
-                    .title,
-                    .desc {
-                        color: #fff;
                     }
                 }
             }
@@ -242,8 +240,9 @@
             .particles {
                 max-width: 415px;
                 min-height: 388px;
-                right: -24px;
-                top: -32px;
+                top: 120px;
+                right: 0;
+                left: auto;
             }
 
             .image {
@@ -253,48 +252,34 @@
                     max-width: 340px;
                     max-height: 320px;
                 }
+            }
+        }
+
+        .good-news {
+            .good-news-row {
+                flex-direction: row;
             }
         }
     }
 
     @media(min-width: 992px){
         .introduction {
+            padding-top: 75px;
+            padding-bottom: 160px;
 
             .particles {
-                max-width: 415px;
-                min-height: 388px;
-                right: -45px;
-                top: -50px;
+                max-width: 530px;
+                min-height: 480px;
+                right: 0px;
+                top: 40px;
             }
 
             .image {
                 display: block;
 
                 img {
-                    max-width: 340px;
-                    max-height: 320px;
-                }
-            }
-
-            .content {
-                
-            }
-        }
-    }
-
-    @media(min-width: 1200px) {
-        .introduction {
-            .particles {
-                max-width: 690px;
-                min-height: 615px;
-                right: -45px;
-                top: -50px;
-            }
-
-            .image {
-                img {
-                    max-width: 545px;
-                    max-height: 520px;
+                    max-width: 420px;
+                    max-height: 400px;
                 }
             }
 
@@ -317,6 +302,73 @@
                             line-height: 72px;
                         }
                     }
+                }
+            }
+        }
+
+        .here-for-you {
+            padding: 112px 0px;
+
+            .table-container {
+                bottom: -176px;
+            }
+        }
+
+        .good-news {
+            padding: 128px 0px;
+            
+            .good-news-row {
+                margin-bottom: 300px;
+            }
+        }
+
+
+        .bubble-lists {
+    
+            .bubble-list {
+    
+                &.lg {
+                    padding: 16px;
+                    align-items: end;
+
+    
+                    &.active{
+                        background-color: $clear-blue;
+                        border-radius: 4px;
+                        box-shadow: 0 9px 10px 2px rgba($color: $shadow, $alpha: 0.08);
+                        cursor: pointer;
+    
+                        .title,
+                        .desc {
+                            color: #fff!important;
+                        }
+    
+                        .desc {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: 1200px) {
+        .introduction {
+            .particle-container{
+                position: relative;
+                padding: 0px;
+            }
+            .particles {
+                max-width: 690px;
+                min-height: 615px;
+                right: -45px;
+                top: -50px;
+            }
+
+            .image {
+                img {
+                    max-width: 545px;
+                    max-height: 520px;
                 }
             }
         }

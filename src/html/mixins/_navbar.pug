@@ -35,20 +35,20 @@ mixin navbar()
     //- navbar fixed to top
     nav.navbar.navbar-expand-lg.fixed-top.navbar-light
         //- containerize navbar
-        .container.px-lg-0
+        .container.px-md-3
             //- logo
-            a.navbar-brand(href)
+            a.navbar-brand(href="/")
                 img(src="images/svgs/logo.svg", alt="")
 
             //- table screen login and get started
-            ul.navbar-nav.align-items-center.ml-auto.d-none.d-md-flex.d-lg-none.flex-row
-                li.nav-item.login
+            ul.navbar-nav.align-items-center.ml-auto.d-none.d-md-flex.d-lg-none.flex-row.mr-3
+                li.nav-item.login.mr-4
                     a.nav-link.clear-blue-text(href= "") Login 
                 li.nav-item
                     a.btn.button.button-sm-32.button-lg-48.px-4 Get Started
 
             //- buttons to collapse navbar
-            button.navbar-toggler(type="button", data-toggle="collapse" data-target="#navigation" aria-controls="navigation")
+            button.navbar-toggler.ml-3(type="button", data-toggle="collapse" data-target="#navigation" aria-controls="navigation")
                 span.navbar-toggler-icon 
 
             //- collapse nav items near logo
@@ -61,7 +61,7 @@ mixin navbar()
                 
             //- right navigation items | for computer screen
             ul.navbar-nav.ml-auto.align-items-center.d-none.d-lg-flex.flex-row
-                li.nav-item.login
+                li.nav-item.login.mr-4
                     a.nav-link.clear-blue-text(href= "") Login
                 li.nav-item
                     a.btn.button.button-sm-32.button-lg-48.px-4 Get Started

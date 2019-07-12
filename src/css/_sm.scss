@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    line-height: 1;
+}
+
 // swoosh bg
 .swooshed {    
     background-repeat: no-repeat;
@@ -20,6 +25,7 @@
 .navbar{
     background: #fff;
     box-shadow: 0 1px 0 0 rgba($color: $shadow, $alpha: 0.05);
+    height: 80px;
 
     // navbrand styling
     .navbar-brand {
@@ -113,11 +119,11 @@
 
     // actual footer
     footer {
-        padding-top: 96px;
-        padding-bottom: 96px;
+        padding-bottom: 48px;
 
         .content {
-            margin-right: 64px;
+            margin-right: 40px;
+            white-space: nowrap;
 
             .header {
                 font-size: 20px;

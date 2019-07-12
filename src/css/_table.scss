@@ -1,17 +1,20 @@
 .table-shadow {
     box-shadow: 0 2px 6px 1px rgba($color: $shadow, $alpha: 0.12);
-    height: 470px;
+    height: 490px;
     overflow-y: auto;
+    border-radius: 6px;
+    
 }
 .table {
     position: relative;
     margin-bottom: 0px;
+    white-space: nowrap;
 
     // table header and table data
     th,
     td {
         border: none!important;
-        padding: 0px 24px;
+        padding: 0px 16px;
 
         &.number,
         &.price{
@@ -45,7 +48,7 @@
             content: ' ';
             display: block;
             height: calc(100% - 64px);
-            width: 24px;
+            width: 16px;
             position: absolute;
             bottom: 0;
             background: #fff;
@@ -62,100 +65,100 @@
 
         tr {
             td {
-                padding-top: 24px;
-                padding-bottom: 24px;
                 border-top: solid 1px $pale-grey-two!important;
-                height: 80px;
                 width: 25%;
+            }
 
-                // table product
-                &.product {
-                    img {
-                        width: 32px;
-                        height: 32px;
-                        display: block;
-                        margin-right: 24px;
-                    }
+            .td {
+                height: 84px;
+                align-items: center;
+            }
 
-                    .product-name{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        p {
-                            margin: 0px;
-                        }
-
-                        .name {
-                            margin-right: 8px;
-                            font-size: 18px;
-                        }
-
-                        .abbr {
-                            font-size: 12px;
-                            color: $bluey-grey;
-                            text-transform: uppercase;
-                            margin-top: 3px;
-                            font-weight: 500;
-                        }
-                    }
+            // table product
+            .product {
+                img {
+                    width: 32px;
+                    height: 32px;
+                    display: block;
                 }
 
-                // price
-                &.price {
-                    font-family: $titillium;
-                    font-size: 18px;
-                    font-weight: 600;
+                .product-name{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
 
-                    .amount {
-                      margin-right: 4px;  
+                    p {
+                        margin: 0px;
                     }
 
-                    .amount,
-                    .currency {
-                        line-height: 32px;
-                    }
-                }
-
-                // change
-                &.change {
-                    i {
-                        font-size: 18px;
+                    .name {
+                        margin-right: 8px;
                     }
 
-                    span {
-                        font-size: 18px;
-                        font-family: $titillium;
-                    }
-
-                    i,
-                    span {
-                        line-height: 32px;
+                    .abbr {
+                        font-size: 12px;
                         color: $bluey-grey;
+                        text-transform: uppercase;
+                        margin-top: 3px;
+                        font-weight: 500;
                     }
+                }
+            }
 
-                    &.up {
-                        i, span {
-                            color: $dark-mint;
-                        }
-                    }
+            // price
+            .price {
+                font-family: $titillium;
+                font-size: 18px;
 
-                    &.down {
-                        i, span {
-                            color: $pale-red;
-                        }
+                .amount {
+                    margin-right: 4px;  
+                }
+
+                .amount,
+                .currency {
+                    line-height: 32px;
+                }
+            }
+
+            // change
+            .change {
+                i {
+                    font-size: 18px;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-family: $titillium;
+                }
+
+                i,
+                span {
+                    line-height: 32px;
+                    color: $bluey-grey;
+                }
+
+                &.up {
+                    i, span {
+                        color: $dark-mint;
                     }
                 }
 
-                // actions
-                &.actions {
-                    button {
-                        border-radius: 4px;
-                        border: solid 1.5px $pale-grey-two;
-                        background: #fff;
-                        color: $navy!important;
-                        margin-right: 16px;
+                &.down {
+                    i, span {
+                        color: $pale-red;
                     }
+                }
+            }
+
+            // actions
+            .actions {
+                button {
+                    border-radius: 4px;
+                    border: solid 1.5px $pale-grey-two;
+                    background: #fff;
+                    color: $navy!important;
+                    line-height: 35px;
+                    height: 36px;
                 }
             }
 

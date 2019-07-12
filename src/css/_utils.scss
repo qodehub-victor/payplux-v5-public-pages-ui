@@ -8,9 +8,9 @@
     @media (min-width: #{$grid-numb}px){
         @while $i < 65 {
             .font-size-#{$grid-name}-#{$i} {
-                font-size: #{$i}px;
+                font-size: #{$i}px !important;
             }
-            $i: $i + 4;
+            $i: $i + 2;
         }
     }
 }
@@ -23,7 +23,7 @@
     @media (min-width: #{$grid-numb}px){
         @each $weight in $weights {
             .font-weight-#{$grid-name}-#{$weight} {
-                font-weight: #{$weight};
+                font-weight: #{$weight} !important;
             }
         }
     }
@@ -42,45 +42,62 @@
 
 // margins and paddings
 @each $grid in $grids{
-    $j: 8;
+    $j: 0;
     $grid-name: map-get($map: $grid, $key: name);
     $grid-numb: map-get($map: $grid, $key: grid);
 
     @media (min-width: #{$grid-numb}px){
         @while $j < 65 {
             .margin-top-#{$grid-name}-#{$j} {
-                margin-top: #{$j}px;
+                margin-top: #{$j}px!important;
             }
 
             .margin-right-#{$grid-name}-#{$j} {
-                margin-right: #{$j}px;
+                margin-right: #{$j}px!important;
             }
 
             .margin-bottom-#{$grid-name}-#{$j} {
-                margin-bottom: #{$j}px;
+                margin-bottom: #{$j}px!important;
             }
 
             .margin-left-#{$grid-name}-#{$j} {
-                margin-left: #{$j}px;
+                margin-left: #{$j}px!important;
             }
 
             .padding-top-#{$grid-name}-#{$j} {
-                padding-top: #{$j}px;
+                padding-top: #{$j}px!important;
             }
 
             .padding-right-#{$grid-name}-#{$j} {
-                padding-right: #{$j}px;
+                padding-right: #{$j}px!important;
             }
 
             .padding-bottom-#{$grid-name}-#{$j} {
-                padding-bottom: #{$j}px;
+                padding-bottom: #{$j}px!important;
             }
 
             .padding-left-#{$grid-name}-#{$j} {
-                padding-left: #{$j}px;
+                padding-left: #{$j}px!important;
             }
 
             $j: $j + 4;
+        }
+    }
+}
+
+// width
+@each $grid in $grids{
+    $j: 5;
+    $grid-name: map-get($map: $grid, $key: name);
+    $grid-numb: map-get($map: $grid, $key: grid);
+
+    @media (min-width: #{$grid-numb}px){
+        @while $j < 101 {
+            .w-#{$grid-name}-#{$j} {
+                width: ($j * 1% )!important;
+            }
+
+            $j: $j + 5;
         }
     }
 }

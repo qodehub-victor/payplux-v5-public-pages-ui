@@ -101,26 +101,6 @@ mixin table()
                     "BUY", "SELL"
                 ]
             }
-
-            //- {
-            //-     product: {
-            //-         icon: "omg.svg",
-            //-         name: "OmiseGO",
-            //-         abbr: "OMG"
-            //-     },
-            //-     price: {
-            //-         amount: '1.69',
-            //-         currency: "USD"
-            //-     },
-            //-     change: {
-            //-         type: "down",
-            //-         percentage: "0.34"
-            //-     },
-            //-     chart: "",
-            //-     actions: [
-            //-         "BUY", "SELL"
-            //-     ]
-            //- }
         ]
 
     .table-shadow
@@ -128,26 +108,30 @@ mixin table()
             thead
                 tr 
                     th.product PRODUCT 
-                    th.price PRICE
-                    th.change CHANGE
-                    th.chart CHART
+                    th.price.d-none.d-md-table-cell PRICE
+                    th.change.d-none.d-md-table-cell CHANGE
+                    th.chart.d-none.d-lg-table-cell CHART
                     th.actions ACTIONS 
 
             tbody 
                 each datum in data 
                     tr 
                         td.product
-                            .d-flex
-                                img(src= 'images/currencies/' + datum.product.icon, alt="")
+                            .d-flex.td
+                                img.mr-2.mr-md-4(src= 'images/currencies/' + datum.product.icon, alt="")
                                 .product-name 
-                                    p.name= datum.product.name
-                                    p.abbr= datum.product.abbr
-                        td.price
-                            .d-flex.justify-content-end
+                                    .d-flex
+                                        p.name.font-size-sm-16.font-size-md-18= datum.product.name
+                                        p.abbr= datum.product.abbr
+                                    p.price.d-block.d-md-none.font-size-sm-16
+                                        span.amount= datum.price.amount 
+                                        span.currency= datum.price.currency
+                        td.price.d-none.d-md-table-cell
+                            .d-flex.justify-content-end.td.font-weight-sm-600
                                 span.amount= datum.price.amount 
                                 span.currency= datum.price.currency
-                        td.change(class= datum.change.type)
-                            .d-flex
+                        td.change.d-none.d-md-table-cell(class= datum.change.type)
+                            .d-flex.td
                                 if datum.change.type == 'up'
                                     i.material-icons arrow_upward
                                 else 
@@ -155,8 +139,8 @@ mixin table()
 
                                 span= datum.change.percentage
 
-                        td.chart 
+                        td.chart.d-none.d-lg-table-cell
                         td.actions
-                            .d-flex.w-100 
-                                each button in datum.actions 
-                                    button.btn.button.button-32.font-size-sm-12.font-weight-sm-600.px-3= button
+                            .d-flex.w-100.td
+                                each button,index in datum.actions 
+                                    button.btn.button.button-32.font-size-sm-12.font-weight-sm-600.px-3(class= datum.actions.length > 1 && index == 0 ? "mr-2 mr-md-3" : "")= button

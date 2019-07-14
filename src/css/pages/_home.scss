@@ -110,6 +110,10 @@
         background-image: linear-gradient(to bottom, $pale-grey, rgba(247, 248, 250, 0));
 
         .header {
+            &-container {
+                max-width: 380px;
+            }
+            
             line-height: 1.29;
         }
 

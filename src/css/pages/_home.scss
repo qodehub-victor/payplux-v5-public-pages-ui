@@ -1,7 +1,7 @@
 #home {
     // introduction section
     .introduction{
-        padding-top: calc(80px + 64px);
+        padding-top: 64px;
         padding-bottom: 64px;
 
         // background particles
@@ -10,10 +10,11 @@
             min-height: 430px;
             position: absolute;
             left: 0;
-            top: 96px;
+            top: 0px;
             background-image: url("../images/svgs/swoosh-particles.svg");
             background-repeat: no-repeat;
             background-size: contain;
+            background-position: center;
         }
 
         .content {
@@ -28,6 +29,8 @@
             .description {
                 font-size: 18px;
                 line-height: 1.6;
+                max-width: 420px;
+                margin-bottom: 44px;
 
                 img {
                     margin-bottom: 5px;
@@ -235,12 +238,13 @@
 
     @media(min-width: 768px){
         .introduction {
-            padding-top: 120px;
+            padding-top: 40px;
+            padding-bottom: 56px;
 
             .particles {
                 max-width: 415px;
                 min-height: 388px;
-                top: 120px;
+                top: 40px;
                 right: 0;
                 left: auto;
             }

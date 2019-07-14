@@ -11,6 +11,7 @@ $cloudy-blue      : #c0c6ce;
 $shadow           : rgb(6, 31, 60);
 $dark-mint        : #52b875;
 $pale-red         : #e65b43;
+$white            : #fff;
 
 $colors: () !default;
 
@@ -27,7 +28,8 @@ $colors: map-merge(
         "cloudy-blue": $cloudy-blue,
         "shadow": $shadow,
         "dark-mint": $dark-mint,
-        "pale-red": $pale-red
+        "pale-red": $pale-red,
+        "white": $white
     ),
 $colors);
 

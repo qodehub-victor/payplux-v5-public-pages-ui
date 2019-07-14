@@ -6,6 +6,35 @@
 // navigation
 .navbar {
     height: 95px;
+
+    // navigation item
+    .navbar-collapse {
+        padding-top: 0px;
+        position: initial;
+
+        .navbar-nav {
+            padding-top: 0px;
+        }
+
+        .nav-item {
+            .nav-link {
+                padding: 0px 16px;
+                line-height: 30px;
+
+            }
+
+            // active nav item
+            &.active {
+                .nav-link{
+                    background: rgba($color: $clear-blue, $alpha: 0.05);
+                }
+            }
+        }
+    }
+
+    .get-started-button {
+        width: 174px;
+    }
 }
 
 .footer {

@@ -67,17 +67,17 @@
 
 
     // payplux is here for you section
-    .here-for-you {
+    .here-forç-you {
         position: relative;
         background-color: $pale-grey;
         height: 680px;
         padding: 64px 0px;
 
-        .table-container {
+        .table-contaçiner {
             position: absolute;
             bottom: -278px;
 
-            .table-shadow {
+            .table-shadçow {
                 margin-left: 0px;
                 margin-right: 0px;
             }
@@ -99,7 +99,7 @@
         }
 
         .experience-image {
-            height: 1000px;
+            height: 920px;
         }
     }
 
@@ -215,6 +215,8 @@
                     height: 72px;
                     margin-right: 32px;
                     flex: 0 0 72px;
+                    box-shadow: 0 6px 10px 2px rgba($color: $shadow, $alpha: 0.08);
+
                 
                     img {
                         width: 48px;
@@ -292,6 +294,14 @@
             }
 
             .content {
+                .header {
+                    font-size: 44px;
+                }
+
+                .description {
+                    font-size: 20px;
+                }
+
                 form {
                     .form-group:first-child {
                         max-width: 360px;
@@ -319,7 +329,14 @@
 
             .table-container {
                 bottom: -176px;
+
+                .table-shadow {
+                    margin-left: 35px;
+                    margin-right: 35px;
+                }
             }
+
+            
         }
 
         .good-news {

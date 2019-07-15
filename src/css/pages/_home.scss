@@ -96,6 +96,10 @@
 
         .heading {
             margin-bottom: 80px;
+
+            .header {
+                line-height: 1.33;
+            }
         }
 
         .experience-image {
@@ -132,7 +136,7 @@
             margin-bottom: 40px;
 
             .number {
-                line-height: 28px;
+                line-height: 25px;
                 height: 30px;
                 width: 30px;
                 border-radius: 50%;

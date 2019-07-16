@@ -5,11 +5,13 @@
         padding-top: 40px;
         padding-bottom: 32px;
 
+        // header
         .header {
             font-size: 123px;
             line-height: 0.89;
         }
 
+        // description
         .description {
             p {
                 line-height: 1.88;
@@ -18,20 +20,205 @@
         }
     }
 
+    // loyal customers
+    .loyal {
+        background-color: $pale-grey;
+        padding-bottom: 72px;
+
+        // stats
+        .stats {
+            margin-bottom: 72px;
+            background-color: $clear-blue;
+            display: flex;
+            padding: 56px 0px;
+            flex-direction: column;
+            width: 100%;
+
+            .stat {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 72px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .number {
+                    font-size: 44px;
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                }
+
+                .desc {
+                    font-size: 16px;
+                    opacity: 0.5;
+                    margin: 0px;
+                    line-height: 1.5;
+                    letter-spacing: -0.45px;
+                }
+            }
+        }
+
+        .header {
+            margin-bottom: 32px;
+        }
+
+        .content {
+            line-height: 1.5;
+            letter-spacing: -0.5px;
+        }
+
+        .steps {
+            .number {
+                line-height: 34px;
+            }
+        }
+    }
+
+    .press-assets {
+        padding-top: 72px;
+        padding-bottom: 96px;
+
+        .container {
+            max-width: 885px!important;
+        }
+
+        .content {
+            line-height: 1.67;
+            letter-spacing: -0.5px;
+        }
+
+        .socials-container {
+            margin-top: 88px;
+
+            .socials {
+                margin-top: 24px;
+
+                .social {
+                    width: 220px;
+                    border-radius: 8px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0px 16px;
+
+                    img {
+                        height: 40px;
+                        width: 40px;
+                        margin-right: 19px;
+                    }
+
+                    .name {
+                        color: #fff;
+                        font-size: 16px;
+                        letter-spacing: -0.45px;
+                    }
+
+                    &.facebook {
+                        background-color: #1578f2;
+                    }
 
 
+                    &.twitter {
+                        background-color: #1da1f2;
+
+                        img {
+                            height: 30.5px;
+                            width: 37.5px;
+                        }
+                    }
+
+                    &.instagram {
+                        background-image: linear-gradient(124deg, #b900b4, #f50000);
+                    }
+                }
+            }
+        }
+    }
 
 
+    // tablet screens and above
     @media(min-width: 768px){
         .introduction {
             padding-bottom: 80px;
         }
+
+        .loyal {
+            .stats {
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 0px;
+
+                .stat {
+                    margin-left: 65px;
+                    margin-right: 65px;
+                }
+            }
+        }
+
+        .press-assets {
+            padding-bottom: 112px;
+            padding-top: 80px;
+
+            .socials-container{
+                margin-top: 112px;
+
+                .socials {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 40px;
+
+                }
+            }
+        }
     }
 
+
+
+    // large screens and above
     @media(min-width: 1200px) {
         .introduction {
+            padding-bottom: 300px;
+
             .header {
                 font-size: 231px;
+            }
+        }
+
+
+        .loyal {
+            position: relative;
+            padding-top: 220px;
+            padding-bottom: 118px;
+
+            .stats {
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1045px;
+                border-radius: 17px;
+                box-shadow: 0 5px 6px 0 rgba($color: $shadow, $alpha: 0.08);
+                top: calc(-188px / 2);
+                left: 0;
+                right: 0;
+
+                .stat {
+                    margin-left: 80px;
+                    margin-right: 80px;
+                }
+            }
+        }
+
+        .press-assets {
+            padding-top: 190px;
+            padding-bottom: 316px;
+
+            .socials-container{
+                margin-top: 245px;
+
+                .socials {
+                    margin-top: 64px;
+                }
             }
         }
     }

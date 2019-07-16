@@ -258,3 +258,27 @@ body {
         }
     }
 }
+
+
+// steps
+.steps {
+
+    .number {
+        line-height: 25px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: solid 2px #e4f1ff;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin-right: 16px;
+        color: $steel;
+    }
+
+    .step {
+        font-size: 18px;
+        color: $steel;
+        line-height: 30px;
+    }
+}

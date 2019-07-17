@@ -53,7 +53,7 @@ mixin table()
                     currency: "USD"
                 },
                 change: {
-                    type: "",
+                    type: "none",
                     percentage: "0.00%"
                 },
                 chart: "",
@@ -120,7 +120,7 @@ mixin table()
                             .d-flex.td
                                 img.mr-2.mr-md-4(src= 'images/currencies/' + datum.product.icon, alt="")
                                 .product-name 
-                                    .d-flex
+                                    .d-flex.align-items-center
                                         p.name.font-size-sm-16.font-size-md-18= datum.product.name
                                         p.abbr= datum.product.abbr
                                     p.price.d-block.d-md-none.font-size-sm-16
@@ -132,10 +132,13 @@ mixin table()
                                 span.currency= datum.price.currency
                         td.change.d-none.d-md-table-cell(class= datum.change.type)
                             .d-flex.td
+
                                 if datum.change.type == 'up'
                                     i.material-icons arrow_upward
-                                else 
-                                    i.material-icons arrow_downward 
+                                else if datum.change.type == 'down'
+                                    i.material-icons arrow_downward
+                                else
+                                    i.material-icons remove
 
                                 span= datum.change.percentage
 

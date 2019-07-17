@@ -1,0 +1,16 @@
+mixin intro(data)
+    p.header= data.header
+
+    if data.desc 
+        .description
+            p.m-0 Buy, sell and exchange cryptocurrencies with your mobile money directly in GHS 
+                img(src="images/svgs/gh-flag.svg")
+                | with ease.
+    
+    .get-started
+        form
+            .d-lg-flex
+                .form-group 
+                    input.form-control(type="email" placeholder="Email address...")
+                .form-group.m-0
+                    button.btn.button.button-72(type="submit")= data.button

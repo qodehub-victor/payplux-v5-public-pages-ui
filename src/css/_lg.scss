@@ -38,6 +38,7 @@ body {
     }
 }
 
+// footer
 .footer {
     footer {
         padding-top: 96px;
@@ -52,4 +53,41 @@ body {
             }
         }
     }
+}
+
+// for all introduction information
+.intro-info {
+    .header {
+        font-size: 44px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    form {
+        .form-group:first-child {
+            max-width: 360px;
+            margin-right: 16px;
+
+            input {
+                height: 72px;
+            }
+        }
+
+        .form-group:last-child {
+            flex: 0 0 170px;
+
+            button {
+                height: 72px;
+                line-height: 72px;
+            }
+        }
+    }
+}
+
+// for all tables
+.table-shadow {
+    margin-left: 35px;
+    margin-right: 35px;
 }

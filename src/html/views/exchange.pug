@@ -13,6 +13,37 @@ block variables
         //- active navigation item
         var active_nav = "Exchange"
 
+        var pageData = {
+            intro: {
+                header: "Exchange from one crypto to the other",
+                button: "Exchange now!",
+                img: "bsx-exchange.png"
+            },
+
+            separator: {
+                header: "Exchange on PayPlux",
+                desc: "Exchange means to switch one crypto for the other. So you have bitcoin, but want ethereum or vice versa? Just exchange!"
+            },
+
+            info: {
+                type: "Exchange",
+                desc: "PayPlux is a digital currency exchange that allows you to exchange one crypto for the other. You can exchange:"
+            },
+
+            steps: ['Bitcoin', 'Perfect Money', 'Litecoin', 'Ethereum'],
+
+            process: {
+                header: "The Process",
+                desc: "Our process is very simple and easy to use.",
+                steps: ['Choose the crypto you are exchanging and the amount', 'Choose the crypto you are to get in return', 'Choose the destination address of the crypto you want', 'Add a refund address in case there’s need for it', 'Confirm exchange and wait for your order to be received'],
+                img: "group-24.png"
+            },
+
+            table: {
+                header: "Start exchanging now!"
+            }
+        }
 
 block body
-    #exchange.body
+    #exchange.bsx.body
+        +bsx(pageData)

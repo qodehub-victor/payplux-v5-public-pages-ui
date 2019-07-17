@@ -80,22 +80,13 @@ block body
 
                 .row          
                     //- content
-                    .col-12.col-md-6.content.d-flex.align-items-center.pl-md-0.pl-lg-3
-                        .v-align 
-                            p.header Buy, sell & exchange cryptocurrencies
-
-                            .description
-                                p.m-0 Buy, sell and exchange cryptocurrencies with your mobile money directly in GHS 
-                                    img(src="images/svgs/gh-flag.svg")
-                                    | with ease.
-                            
-                            .get-started
-                                form
-                                    .d-lg-flex
-                                        .form-group 
-                                            input.form-control(type="email" placeholder="Email address...")
-                                        .form-group.m-0
-                                            button.btn.button.button-72(type="submit") Get Started
+                    .col-12.col-md-6.content.intro-info.d-flex.align-items-center.pl-md-0.pl-lg-3
+                        .v-align
+                            +intro({
+                                header: "Buy, sell & exchange cryptocurrencies",
+                                desc: true,
+                                button: "Get Started"
+                            })
 
 
                     //- image

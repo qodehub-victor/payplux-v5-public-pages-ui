@@ -4,6 +4,8 @@
     .introduction {
         padding-top: 40px;
         padding-bottom: 32px;
+        background-size: cover!important;
+        // background-position: center;
 
         // header
         .header {
@@ -78,6 +80,7 @@
     .press-assets {
         padding-top: 72px;
         padding-bottom: 96px;
+        background-size: cover;
 
         .container {
             max-width: 885px!important;

@@ -13,6 +13,61 @@ block variables
         //- active navigation item
         var active_nav = "Sell"
 
+        var pageData = {
+            intro: {
+                header: "Sell your Bitcoin, Perfect Money, Ethereum, Litecoin in Ghana easily",
+                button: "Sell now!",
+                img: "bsx-sell.png"
+            },
+
+            separator: {
+                header: "Sell on PayPlux",
+                desc: "To sell on PayPlux means simply exchange your digital currency of choice for GHS, ie bitcoin, perfect money, ethereum, litecoin. You can also call it liquidating your digital currency for cash."
+            },
+
+            info: {
+                type: "Sell",
+                desc: "PayPlux is a digital currency exchange that allows you to sell digital currencies including both crypto and non crypto assets. We buy from you:"
+            },
+
+            steps: ['Bitcoin', 'Perfect Money', 'Litecoin', 'Ethereum'],
+
+            options: {
+                header: "Getting your Cash",
+                desc: "Receiving your cash from PayPlux after selling can be done in various ways:",
+
+                opts: [
+                    {
+                        icon: "cashout-wallet.svg",
+                        header: "PayPlux Withdrawal Wallet",
+                        desc: "Choose to have your money kept in your withdrawal wallet for later withdrawal"
+                    },
+                    {
+                        icon: "bank-deposit.svg",
+                        header: "Bank Payments",
+                        desc: "For amounts beyond GHSxxxxxx, fill a KYC form and leave your bank details for PayPlux to make you payments directly. You receive your money once your digital currency has been received by us."
+                    },
+                    {
+                        icon: "mobile-money.svg",
+                        header: "With Mobile Money on all Networks",
+                        desc: "Send your money directly to your mobile money wallet on all networks."
+                    }
+                ]
+            },
+
+            process: {
+                header: "The Process",
+                desc: "Our process is very simple and easy to use.",
+                steps: ['Choose digital currency to sell', 'Choose amount to sell', 'Choose how to receive your money', 'Send the digital currency and wait for your money. You receive your money when digital currency sent has been received.'],
+                img: "sell.png"
+            },
+
+            table: {
+                header: "Got some crypto to sell?"
+            }
+        }
 
 block body
-    #sell.body
+    #sell.bsx.body
+        +bsx(pageData)
+                

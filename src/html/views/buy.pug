@@ -13,7 +13,70 @@ block variables
         //- active navigation item
         var active_nav = "Buy"
 
+        var pageData = {
+            intro: {
+                header: "Buy your Bitcoin, Perfect Money, Ethereum, Litecoin in Ghana easily",
+                button: "Buy now!",
+                img: "bsx-buy.png"
+            },
+
+            separator: {
+                header: "Buy on PayPlux",
+                desc: "To buy on PayPlux means simply exchange your GHS for a digital currency of choice, i.e. Bitcoin, Perfect Money, Ethereum, Litecoin."
+            },
+
+            info: {
+                type: "Buy",
+                desc: "PayPlux is a digital currency exchange that allows you to buy digital currencies including both crypto and non crypto assets. We have in stock:"
+            },
+
+            steps: ['Bitcoin', 'Perfect Money', 'Litecoin', 'Ethereum'],
+
+            options: {
+                header: "Payment Options",
+                desc: "Buying from PayPlux can be done in various ways:",
+
+                opts: [
+                    {
+                        icon: 'cashout-wallet.svg', 
+                        header: 'From your PayPlux Prepaid Wallet', 
+                        desc: 'Preload your PayPlux prepaid wallet with any amount and buy instantly from there when you need any digital currency.'
+                    },
+                    {
+                        icon: 'bank-deposit.svg', 
+                        header: 'Bank Payments', 
+                        desc: 'For amounts beyond GHSxxxxxx, fill a KYC form and get the bank details for PayPlux to make your payments directly. You receive your order once payment has been confirmed successfully.'
+                    },
+                    {
+                        icon: 'mobile-money.svg', 
+                        header: 'With Mobile Money on all Networks', 
+                        desc: 'Place your order and make payments by sending the money from your mobile money on any network directly to PayPlux to complete your order.'
+                    },
+                    {
+                        icon: '247.svg', 
+                        header: 'Automatic 24/7 payments', 
+                        desc: 'Place your orders and make payments with our third party Slydepay and Hubtel apps easily. Your buy order is processed instantly no matter the time of day.'
+                    },
+                    {
+                        icon: 'mobile-payment.svg', 
+                        header: 'Directly with USSD', 
+                        desc: 'Dial our PayPlux USSD app code and follow the options to make your order and get it delivered directly to you.'
+                    }
+                ]
+            },
+
+            process: {
+                header: "The Process",
+                desc: "Our process is very simple and easy to use.",
+                steps: ['Choose digital currency to buy', 'Complete the order details: amount to purchase, priority fees, etc.', 'Choose preferred payment method', 'Complete your order and wait for your account to be credited'],
+                img: "buy.png"
+            },
+
+            table: {
+                header: "Place your buy order right away!"
+            }
+        }
 
 block body
-    #buy.body
-        +page({})
+    #buy.bsx.body
+        +bsx(pageData)

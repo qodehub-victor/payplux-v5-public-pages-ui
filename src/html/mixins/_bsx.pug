@@ -1,0 +1,96 @@
+mixin bsx(data)
+    .introduction
+        .container 
+            .row.justify-content-between
+                .col-12.col-md-6.col-xl-6.d-flex.align-items-center.intro-info
+                    .v-align.pr-md-2.pr-xl-0      
+                        +intro({
+                            header: data.intro.header,
+                            button: data.intro.button
+                        })
+
+                .col-12.col-md-6.col-xl-5.p-0
+                    img.intro-image(src= "images/img/" + data.intro.img, alt="")
+
+    .separator.navy-bg.d-flex.justify-content-center
+        .text-center.content
+            .question-mark-container.mx-auto.mb-4
+                span.question-mark ?
+            .content
+                p.header.mb-3= data.separator.header
+                p.desc.steel-text.font-size-sm-16.m-0= data.separator.desc
+
+
+    .info-container
+        .container
+            .row
+                .col-12.col-md-6.d-flex.align-items-center
+                    img.img-fluid(src="images/svgs/group-16.svg", alt="").d-block.mx-auto
+                .col-12.col-md-6
+                    p.font-size-sm-30.font-size-md-34.line-height-min-head.font-weight-sm-500.header.mb-5 What Can I 
+                        span.clear-blue-text= data.info.type 
+                        | &nbsp;on 
+                        br
+                        | Payplux
+                    .desc.font-size-sm-18.font-size-lg-20.steel-text.mb-5= data.info.desc
+
+                    .steps
+                        each step in data.steps
+                            .d-flex.margin-bottom-sm-16 
+                                span.number
+                                    i.material-icons.font-size-sm-18.clear-blue-text check
+                                span.step= step 
+                   
+
+    if data.options 
+        .options
+            .container
+                .heading.text-center
+                    p.font-size-sm-30.font-size-md-34.line-height-min-head.font-weight-sm-500.header.mb-3= data.options.header
+                    p.desc.steel-text.font-size-sm-18.font-size-md-20.m-0.line-height-normal= data.options.desc
+
+                - var row = 0
+                - var options = data.options.opts
+
+                while row < (Math.ceil(data.options.opts.length / 2) + 2)
+                    .d-flex.flex-column-reverse.flex-md-row.justify-content-between.opts
+                        each index in [row, row + 1]
+                            if typeof options[index] !== 'undefined'
+                                .option
+                                    img.icon.mb-4.d-block.mx-auto.mx-md-0(src= "images/svgs/" + options[index].icon)
+                                    p.header.font-size-sm-18.font-weight-sm-500.text-center.text-md-left= options[index].header
+                                    p.desc.font-size-sm-16.steel-text.m-0.text-center.text-md-left= options[index].desc
+                    - row+=2
+
+
+    .process
+        .back
+        .container
+            .row.justify-content-between
+                .col-12.col-md-6.col-xl-5.pr-xl-0.d-flex.align-items-center.content
+                    .v-align
+                        .heading
+                            p.font-size-sm-30.font-size-md-34.line-height-min-head.font-weight-sm-500.header.mb-5= data.process.header
+                            p.desc.steel-text.font-size-sm-18.font-size-md-20.m-0.line-height-normal.mb-3= data.process.desc
+
+                        .steps
+                            each step, index in data.process.steps
+                                .d-flex.margin-bottom-sm-16 
+                                    span.number.clear-blue-text= index+1
+                                    span.step= step
+
+                        .conclusion
+                            block conclusion
+                
+                .col-12.col-md-6.d-flex.align-items-center
+                    img.img-fluid(src="images/img/" + data.process.img, alt="")
+
+
+
+
+    .table-container.swooshed
+        .container
+            .heading
+                p.font-size-sm-30.font-size-md-34.line-height-min-head.font-weight-sm-500.header.mb-3.text-md-center= data.table.header
+
+            +table()

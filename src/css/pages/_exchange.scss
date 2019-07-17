@@ -1,3 +1,12 @@
 #exchange {
     
+    @media(min-width: 1140px){
+        .process {
+
+            img {
+                height: 275px;    
+                max-width: 200%;       
+            }
+        }
+    }
 }

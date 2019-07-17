@@ -274,11 +274,57 @@ body {
         text-align: center;
         margin-right: 16px;
         color: $steel;
+        flex: 0 0 30px;
     }
 
     .step {
         font-size: 18px;
         color: $steel;
         line-height: 30px;
+    }
+}
+
+
+// intro information
+.intro-info {
+    .header {
+        font-size: 37px;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 420px;
+        margin-bottom: 44px;
+
+        img {
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+    }
+
+    form {
+        .form-group:first-child {
+            width: 100%;
+
+            input {
+                height: 60px;
+                font-size: 18px;
+                padding: 24px;
+            }
+        }
+
+        .form-group:last-child {
+
+            button {
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+            }
+        }
     }
 }

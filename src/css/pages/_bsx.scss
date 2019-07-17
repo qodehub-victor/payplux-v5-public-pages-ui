@@ -56,6 +56,12 @@
     // icons container
     .info-container {
         background-color: $pale-grey;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .group-icons {
+            margin-top: 40px;
+        }
 
         .desc {
             line-height: 1.7;
@@ -133,25 +139,17 @@
 
     .back-container {
         position: absolute;
-        height: 100%;
+        height: 530px;
         right: 0;
-        width: 40%;
-        top: 0;
+        width: 70%;
+        bottom: 0;
         display: flex;
         align-items: center;
+        overflow-y: hidden;
 
-        .back {
-            height: calc(1024px * 1.065);
-            width: 200%;
-            border-top-left-radius: 100%;
-            border-bottom-left-radius: 100%;
-            background-color: $clear-blue;
-            overflow: hidden;
 
-            .iconic-bg {
-                height: 100%;
-                width: 100%;
-            }
+        img {
+            height: 100%;
         }
     }
 
@@ -165,6 +163,10 @@
         .info-container {
             padding-top: 72px;
             padding-bottom: 72px;
+
+            .group-icons {
+                margin: 0px;
+            }
         }
 
         .options {
@@ -196,6 +198,16 @@
         
             .heading {
                 margin-bottom: 40px;
+            }
+        }
+
+        .back-container {
+            height: 100%;
+            width: 40%;
+            top: 0;
+
+            img {
+                min-height: 100%;
             }
         }
     }

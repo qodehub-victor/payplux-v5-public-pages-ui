@@ -23,8 +23,8 @@ mixin bsx(data)
 
     .info-container
         .container
-            .row
-                .col-12.col-md-6.d-flex.align-items-center
+            .row.flex-column-reverse.flex-md-row
+                .col-12.col-md-6.d-flex.align-items-center.group-icons
                     img.img-fluid(src="images/svgs/group-16.svg", alt="").d-block.mx-auto
                 .col-12.col-md-6
                     p.font-size-sm-30.font-size-md-34.line-height-min-head.font-weight-sm-500.header.mb-5 What Can I 
@@ -65,8 +65,7 @@ mixin bsx(data)
 
     .process
         .back-container
-            .back
-                .iconic-bg
+            img(src="images/img/circle-pattern.png", alt="")
         
         .container
             .row.justify-content-between

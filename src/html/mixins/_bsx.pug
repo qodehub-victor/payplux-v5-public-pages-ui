@@ -64,7 +64,10 @@ mixin bsx(data)
 
 
     .process
-        .back
+        .back-container
+            .back
+                .iconic-bg
+        
         .container
             .row.justify-content-between
                 .col-12.col-md-6.col-xl-5.pr-xl-0.d-flex.align-items-center.content
@@ -79,8 +82,7 @@ mixin bsx(data)
                                     span.number.clear-blue-text= index+1
                                     span.step= step
 
-                        .conclusion
-                            block conclusion
+                        block conclusion
                 
                 .col-12.col-md-6.d-flex.align-items-center
                     img.img-fluid(src="images/img/" + data.process.img, alt="")

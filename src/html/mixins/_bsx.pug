@@ -53,7 +53,7 @@ mixin bsx(data)
                 - var options = data.options.opts
 
                 while row < (Math.ceil(data.options.opts.length / 2) + 2)
-                    .d-flex.flex-column-reverse.flex-md-row.justify-content-between.opts
+                    .d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.justify-content-md-between.opts
                         each index in [row, row + 1]
                             if typeof options[index] !== 'undefined'
                                 .option

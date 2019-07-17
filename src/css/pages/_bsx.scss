@@ -78,6 +78,12 @@
             margin-left: auto;
             margin-right: auto;
             max-width: 860px;
+
+            &:last-child {
+                .option{
+                    margin-bottom: 0px;
+                }
+            }
         }
 
         .heading {
@@ -87,10 +93,6 @@
         .option {
             margin-bottom: 64px;
             max-width: 340px;
-
-            &:last-child {
-                margin-bottom: 0px;
-            }
 
             .desc {
                 line-height: 1.5;

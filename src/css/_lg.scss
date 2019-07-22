@@ -65,24 +65,8 @@ body {
         font-size: 20px;
     }
 
-    form {
-        .form-group:first-child {
-            max-width: 360px;
-            margin-right: 16px;
-
-            input {
-                height: 72px;
-            }
-        }
-
-        .form-group:last-child {
-            flex: 0 0 170px;
-
-            button {
-                height: 72px;
-                line-height: 72px;
-            }
-        }
+    a.button {
+        max-width: 315px;
     }
 }
 

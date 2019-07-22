@@ -2,6 +2,7 @@
  // introduction
     .introduction {
         overflow: hidden;
+        padding-top: 56px;
 
         .intro-image {
             background-color: $clear-blue;
@@ -124,6 +125,15 @@
         .conclusion {
             line-height: 1.5;
         }
+
+        .back-container {
+
+            img {
+                position: absolute;
+                top: 0;
+                height: 156%;
+            }
+        }
     }
 
     .table-container {
@@ -134,8 +144,6 @@
             margin-bottom: 24px;
         }
     }
-
-
 
     .back-container {
         position: absolute;
@@ -155,6 +163,19 @@
 
     @media(min-width: 768px){
         .introduction {
+            position: relative;
+            padding-top: 0px;
+
+
+            .clear-blue-container {
+                position: absolute;
+                background: $clear-blue;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                right: 0;
+            }
+
             .intro-image {
                 margin-top: 0px;
             }
@@ -190,6 +211,17 @@
             .content {
                 margin-bottom: 0px;
             }
+
+            .back-container {
+                height: 120%;
+                top: -10%;
+                width: 40%;
+
+                img {
+                    height: 100%;
+                    position: relative;
+                }
+            }
         }
 
         .table-container {
@@ -198,16 +230,6 @@
         
             .heading {
                 margin-bottom: 40px;
-            }
-        }
-
-        .back-container {
-            height: 100%;
-            width: 40%;
-            top: 0;
-
-            img {
-                min-height: 100%;
             }
         }
     }
@@ -244,6 +266,22 @@
     @media(min-width: 1140px){
         .process {
             height: 1024px;
+        }
+    }
+
+    @media(min-width: 1200px){
+        .introduction {
+            .clear-blue-container {
+                width: 41.6666667%;
+            }
+        }
+    }
+
+    @media(min-width: 1920px){
+        .process {
+            .back-container {
+                height: 250%;
+            }
         }
     }
 }

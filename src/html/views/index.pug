@@ -91,7 +91,7 @@ block body
 
                     //- image
                     .col-12.col-md-6.image.pr-md-0.pr-lg-3.d-none.d-md-flex.align-items-center
-                        img.img-fluid.d-md-block.mr-0.ml-auto(src="images/img/masked-mark.png", alt="") 
+                        img.img-fluid.d-md-block.mr-0.ml-auto.lazy-load-img(src="images/img/ic-masked-mark.png", data-src="images/img/ic-masked-mark@3x.png", alt="") 
         
         //- payplux is here for you
         section.here-for-you.position-relative
@@ -139,10 +139,10 @@ block body
                                             p.title= bubble.title 
                                             p.desc.steel-text= bubble.desc
 
-                                    img.d-block.img-fluid.d-lg-none.mt-4.mr-n1.mr-md-n2.ml-auto(src="images/img/" + bubble.image + ".png", alt="")
+                                    img.d-block.img-fluid.d-lg-none.mt-4.mr-n1.mr-md-n2.ml-auto.lazy-load-md-img(src="images/img/" + bubble.image + ".jpg", data-src="images/img/" + bubble.image + "@3x.jpg", alt="")
 
                     .col-lg-7.d-none.d-lg-flex.align-items-center
-                        img.experience-image(src="images/img/prepaid-wallet.png", alt="")
+                        img.experience-image.lazy-load-img(src="images/img/prepaid-wallet.jpg" data-src="images/img/prepaid-wallet@3x.jpg", alt="")
 
         //- good news
         section.good-news
@@ -151,7 +151,7 @@ block body
                 .row.good-news-row.d-flex.flex-column-reserve.flex-md-row-reverse.flex-lg-row.justify-content-between
 
                     .col-12.col-md-6.d-flex.align-items-center.pr-xl-0
-                        img.img-fluid.ml-0.mr-auto.margin-top-sm-40.margin-top-md-0(src="images/img/referral.jpg", alt="")
+                        img.img-fluid.ml-0.mr-auto.margin-top-sm-40.margin-top-md-0.lazy-load-img(src="images/img/img-referral.jpg", data-src="images/img/img-referral@3x.jpg" ,alt="")
 
                     .col-12.col-md-6.col-xl-5.d-flex.align-items-center
                         .v-align
@@ -164,7 +164,7 @@ block body
                                 | Our Affiliate and Referral program here at PayPlux is created to reward you for being a great friend who shows your friends the great things you discover! Who doesn’t want to be a good friend and get rewarded for it? 
                                 a.clear-blue-text(href) Check it out here.
                             
-                            a.btn.button.button-sm-64.w-100.w-lg-60 I'm a good friend!
+                            a.btn.button.button-sm-64.w-100.w-lg-60(href) I'm a good friend!
 
                 .row.perform-row.flex-md-row-reverse.flex-lg-row.justify-content-between
 
@@ -185,7 +185,7 @@ block body
                                         span.number= index + 1
                                         span.step= step
                             
-                            a.btn.button.button-sm-64.w-100.w-lg-60 Place first order!
+                            a.btn.button.button-sm-64.w-100.w-lg-60(href) Place first order!
 
                     .col-12.col-md-6.d-flex.align-items-center
-                        img.img-fluid.mr-0.ml-auto.margin-top-sm-40.margin-top-md-0(src="images/img/first-order.jpg", alt="")
+                        img.img-fluid.mr-0.ml-auto.margin-top-sm-40.margin-top-md-0.lazy-load-img(src="images/img/img-first-order.jpg", data-src="images/img/img-first-order@3x.jpg",alt="")

@@ -20,7 +20,7 @@ html(lang="en")
         //- include icons
         link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
         //- include css
-        link(rel="stylesheet", href="css/payplux.css?v=0.0.83")
+        link(rel="stylesheet", href="css/payplux.css?v=0.0.84")
         //- include js
         script(src="js/payplux.js?v=0.0.2")
 
@@ -37,3 +37,12 @@ html(lang="en")
 
         block footer 
             include foot
+
+        //- for lazy loading images
+        script.
+            $('.lazy-load-img')
+                .visibility({
+                    type       : 'image',
+                    transition : 'fade in',
+                    duration   : 1000
+                });

@@ -24,6 +24,7 @@ gulp.task('css', function () {
     return gulp
         .src([
             './node_modules/bootstrap/dist/css/bootstrap.css',
+            './src/css/semantic.css',
             './src/css/**/*.scss'
         ])
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))

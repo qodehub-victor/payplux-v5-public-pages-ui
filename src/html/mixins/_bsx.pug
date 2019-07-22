@@ -1,5 +1,6 @@
 mixin bsx(data)
     .introduction
+        .clear-blue-container
         .container 
             .row.justify-content-between
                 .col-12.col-md-6.col-xl-6.d-flex.align-items-center.intro-info
@@ -10,7 +11,7 @@ mixin bsx(data)
                         })
 
                 .col-12.col-md-6.col-xl-5.p-0
-                    img.intro-image(src= "images/img/" + data.intro.img, alt="")
+                    img.intro-image.lazy-load-img(src= "images/img/" + data.intro.img + ".jpg", data-src= "images/img/" + data.intro.img + "@3x.jpg",alt="")
 
     .separator.navy-bg.d-flex.justify-content-center
         .text-center.content
@@ -63,9 +64,10 @@ mixin bsx(data)
                     - row+=2
 
 
-    .process
+    .process.d-flex.align-items-center
         .back-container
-            img(src="images/img/circle-pattern.png", alt="")
+            img(src="images/svgs/Big-oval.svg", alt="")
+            .iconic-bg.position-absolute
         
         .container
             .row.justify-content-between

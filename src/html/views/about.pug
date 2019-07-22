@@ -79,7 +79,7 @@ block body
                                         span.step= step        
 
                     .col-12.col-md-6.d-flex.align-items-center
-                        img.img-fluid.mt-4.mt-md-0(src="images/img/img-royal.png", alt="")
+                        img.img-fluid.mt-4.mt-md-0.lazy-load-img(src="images/img/img-royal.jpg", data-src="images/img/img-royal@3x.jpg",alt="")
 
 
         //- press assets    
@@ -90,7 +90,7 @@ block body
 
                     p.content.font-size-sm-18.font-size-lg-20.steel-text.mb-4 We want you to be able to appropriately represent us in that article or feature you want to write about us. For our partners and those who want us to sponsor any events, you’ll find all the media kit in here. Contact us on any  of our channels if you need something more.
 
-                    a.clear-blue-text.font-size-sm-18.font-size-md-20 Get Press Kit ›
+                    a.clear-blue-text.font-size-sm-18.font-size-md-20(href) Get Press Kit ›
 
 
                 .socials-container
@@ -99,12 +99,12 @@ block body
                         | with us on Social Media
 
                     .socials
-                        .social.facebook.mb-5.mb-md-0
+                        a.social.facebook.mb-5.mb-md-0(hef)
                             img(src="images/icons/facebook.png", alt="")
                             span.name Facebook
-                        .social.twitter.mb-5.mb-md-0
+                        a.social.twitter.mb-5.mb-md-0(href)
                             img(src="images/icons/twitter.png", alt="")
                             span.name Twitter
-                        .social.instagram.mb-5.mb-md-0
+                        a.social.instagram.mb-5.mb-md-0(href)
                             img(src="images/icons/instagram.png", alt="")
                             span.name Instagram

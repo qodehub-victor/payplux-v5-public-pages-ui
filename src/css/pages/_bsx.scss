@@ -10,11 +10,14 @@
             padding-left: 24px;
             padding-bottom: 24px;
             height: 550px;
-            margin-top: 48px;
 
             img {
                 height: 100%;
             }
+        }
+
+        .intro-info {
+            margin-bottom: 100px;
         }
     }
 
@@ -176,8 +179,8 @@
                 right: 0;
             }
 
-            .intro-image {
-                margin-top: 0px;
+            .intro-info {
+                margin-bottom: 0px;
             }
         }
 

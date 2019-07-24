@@ -5,8 +5,6 @@ $(document).ready(function(){
         $(this).addClass("active");
         let image = $(this).data("image");
 
-        console.log(image);
-
         
         $(".experience-image").replaceWith(`
             <img class="experience-image" src="images/img/${image}.jpg" data-src="images/img/${image}@3x.jpg">

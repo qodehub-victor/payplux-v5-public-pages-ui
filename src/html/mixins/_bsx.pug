@@ -10,8 +10,8 @@ mixin bsx(data)
                             button: data.intro.button
                         })
 
-                .col-12.col-md-6.col-xl-5.p-0
-                    img.intro-image.lazy-load-img(src= "images/img/" + data.intro.img + ".jpg", data-src= "images/img/" + data.intro.img + "@3x.jpg",alt="")
+                .col-12.col-md-6.col-xl-5.p-0.clear-blue-bg
+                    img.intro-image.lazy-load-img(src= "images/img/" + data.intro.img + ".png", data-src= "images/img/" + data.intro.img + "@3x.png",alt="")
 
     .separator.navy-bg.d-flex.justify-content-center
         .text-center.content
@@ -86,7 +86,7 @@ mixin bsx(data)
                         block conclusion
                 
                 .col-12.col-md-6.d-flex.align-items-center
-                    img.img-fluid(src="images/img/" + data.process.img, alt="")
+                    img.img-fluid.lazy-load-img(src="images/img/" + data.process.img + ".png", data-src="images/img/" + data.process.img + "@3x.png" alt="")
 
 
 

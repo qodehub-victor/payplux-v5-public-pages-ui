@@ -1,0 +1,82 @@
+extends ../layout/index 
+
+//- define head variables
+block variables 
+    - 
+        //- for head meta data
+        var head = {
+            title: "Blog Details - Payplux",
+            keywords: "",
+            description: ""
+        }
+
+        //- active navigation item
+        var active_nav = "Blog"
+
+
+block body
+    #blog.body
+        
+        ul.nav.nav-tabs.justify-content-center(id="blog-tabs" role="tablist")
+            li.nav-item.mx-3.mb-0
+                a.nav-link.active(id="blog-tab" data-toggle="tab" href="#blog" role="tab" aria-controls="blog" aria-selected="true") Blog
+            li.nav-item.mx-3.mb-0
+                a.nav-link(id="guides-tab" data-toggle="tab" href="#guides" role="tab" aria-controls="guides" aria-selected="true") Guides
+            li.nav-item
+                a.nav-link(id="crypto-tab" data-toggle="tab" href="#crypto" role="tab" aria-controls="crypto" aria-selected="true") Crypto Academy
+
+        .tab-content#blog-tab-conetnt
+            .tab-pane.fade.show.active(id="blog" role="tabpanel" aria-labelledby="blog-tab")
+                .blog-details.padding-bottom-sm-56
+                    .d-md-flex.intro
+                        .img-section
+                            img(src="images/blogs/group-5@3x.jpg", alt="")
+
+                        .content-container.h-100
+                            .content
+                                p.font-size-sm-14.font-weight-sm-500.mb-3 Guide
+                                p.header.font-size-sm-30.font-size-lg-44.font-weight-sm-600.mb-4 Easily transfer crypto from PayPlux to your Coinpard Wallet
+                                p.steel-text.font-size-sm-14.font-weight-sm-500.m-0 8 min read
+
+                                .author.margin-top-sm-36
+                                    .img
+                                        img(src="", alt="")
+                                    .details
+                                        p.name.font-size-sm-16.mb-2 By Enam Agbozo
+                                        p.date.m-0.font-size-sm-14.font-weight-sm-500.steel-text 26 May 2019
+
+                    .blog-read-content
+                        .container
+                            .row
+                                .col-12.col-md-3.d-md-flex.justify-content-md-center
+                                    .d-flex.d-md-block.socials.mt-2.mt-md-0
+                                        a(href="").d-block.mb-0.mb-md-3.mr-3.mr-md-0
+                                            img(src="images/svgs/facebook.svg", alt="")
+
+                                        a(href="").d-block.mb-0.mb-md-3.mr-3.mr-md-0
+                                            img(src="images/svgs/twitter.svg", alt="")
+
+                                        a(href="").d-block.mb-0.mb-md-3
+                                            img(src="images/svgs/whatsapp.svg", alt="")
+
+                                .col-12.col-md-9
+                                    .blog-read-actual-content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                                    .author.d-flex.align-items-center
+                                        .img.d-flex.align-items-center.justify-content-center.mr-4
+                                            img(src="", alt="")
+                                        .name 
+                                            p.m-0.font-size-sm-16 Written by 
+                                                span.font-weight-sm-600 Name of Author
+
+                .related-articles.pale-grey-bg.margin-top-sm-56
+                    .container
+                        .padding-bottom-sm-32.padding-top-sm-40.padding-top-md-72
+                            p.header.font-size-sm-26.font-size-md-32.font-weight-sm-500.m-0 Related articles
+
+                        .row.blogs.padding-bottom-md-48.mb-0
+                            each j in [1,2,3]    
+                                .col-12.col-md-6.col-lg-4.mb-4
+                                    +standardBlog()
+                

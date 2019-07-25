@@ -47,7 +47,7 @@
     $grid-numb: map-get($map: $grid, $key: grid);
 
     @media (min-width: #{$grid-numb}px){
-        @while $j < 65 {
+        @while $j < 80 {
             .margin-top-#{$grid-name}-#{$j} {
                 margin-top: #{$j}px!important;
             }

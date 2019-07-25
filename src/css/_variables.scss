@@ -12,6 +12,8 @@ $shadow           : rgb(6, 31, 60);
 $dark-mint        : #52b875;
 $pale-red         : #e65b43;
 $white            : #fff;
+$ice-blue         : #edf0f2;
+$very-light-blue  : #eceef1;
 
 $colors: () !default;
 
@@ -29,7 +31,9 @@ $colors: map-merge(
         "shadow": $shadow,
         "dark-mint": $dark-mint,
         "pale-red": $pale-red,
-        "white": $white
+        "white": $white,
+        "ice-blue": $ice-blue,
+        "very-light-blue": $very-light-blue
     ),
 $colors);
 

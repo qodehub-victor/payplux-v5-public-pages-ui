@@ -16,3 +16,25 @@ block variables
 
 block body
     #blog.body
+        
+        ul.nav.nav-tabs.justify-content-center(id="blog-tabs" role="tablist")
+            li.nav-item.mb-0.mx-3
+                a.nav-link.active(id="blog-tab" data-toggle="tab" href="#blog" role="tab" aria-controls="blog" aria-selected="true") Blog
+            li.nav-item.mb-0.mx-3
+                a.nav-link(id="guides-tab" data-toggle="tab" href="#guides" role="tab" aria-controls="guides" aria-selected="true") Guides
+            li.nav-item.mb-0
+                a.nav-link(id="crypto-tab" data-toggle="tab" href="#crypto" role="tab" aria-controls="crypto" aria-selected="true") Crypto Academy
+
+        .tab-content#blog-tab-conetnt
+            .tab-pane.fade.show.active(id="blog" role="tabpanel" aria-labelledby="blog-tab")
+                +blog({
+                    title: "Blog"
+                })
+            .tab-pane.fade.show(id="guides" role="tabpanel" aria-labelledby="guides-tab")
+                +blog({
+                    title: "Guides"
+                })
+            .tab-pane.fade.show(id="crypto" role="tabpanel" aria-labelledby="crypto-tab")
+                +blog({
+                    title: "Crypto Academy"
+                })

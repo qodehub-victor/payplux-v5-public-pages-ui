@@ -1,0 +1,18 @@
+mixin blog(data)
+    .heading 
+        p.font-size-sm-24.clear-blue-text.font-weight-sm-600.text-center= data.title
+
+    
+    .blog-content
+        .container
+            each i in [1,2]    
+                .row.blogs
+                    .col-12.mb-4
+                        +bigBlog({
+                            position: i == 2 ? "flex-row-md-reverse" : ""
+                        })
+
+                .row.blogs
+                    each j in [1,2,3]    
+                        .col-12.col-md-6.col-lg-4.mb-4
+                            +standardBlog()

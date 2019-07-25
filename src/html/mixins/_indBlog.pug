@@ -1,0 +1,38 @@
+mixin bigBlog(data = {})
+    .big-blog.ind-blog.d-md-flex(class= data.position)
+        .blog-img.d-flex.flex-column.align-items-center.justify-content-center.px-3.px-lg-5(style="background-image: url(images/blogs/group-5@3x.jpg)") 
+            .icon
+                img(src="images/currencies/btc.svg", alt="")
+            p.header.m-0 Learn everything there is to know about Bitcoin
+        .content-container.p-3.pt-5.p-md-3.p-lg-5.d-flex.align-items-center
+            .d-block
+                .content.d-flex.align-items-center.pb-5.pb-md-0
+                    .div
+                        p.small.font-size-sm-14.font-weight-sm-500.mb-2 History
+                        p.header.font-size-sm-26.font-weight-sm-500.mb-1 What is Bitcoin?
+                        p.preview.steel-text.font-size-sm-16.m-0 Bitcoin is a peer-to-peer electronic cash system proposed by software developer(s) Satoshi Nakamoto. A digital payment system which is the first decentralized digital currency aka cryptocurrency developed. It isn’t based on gold or silver, rather it is based on open source mathematical formulas.
+                .read-more.mt-3.mt-md-3.mt-lg-5.mb-2.mb-md-0
+                    a.clear-blue-text.font-size-sm-16.d-flex.align-items-center.font-weight-sm-500(href="/blog-details.html")
+                        span.d-block.mr-1 Read more
+                        i.material-icons.font-size-sm-16 arrow_forward
+
+mixin standardBlog()
+    .standard-blog.ind-blog
+        .blog-img.cover
+            img.lazy-load-img(src="images/blogs/mask.jpg" data-src="images/blogs/mask@3x.jpg", alt="")
+        .content-container.p-4
+            .content
+                .cat-and-date.d-flex.font-weight-sm-500.font-size-sm-14.margin-bottom-sm-12
+                    span Blog &nbsp;
+                    span.steel-text • 12 May 19
+                p.header.font-size-sm-26.font-weight-sm-500.m-0 How to invest in cryptocurrency without going crazy
+
+                .avatar.d-flex.align-items-center.mt-3.margin-bottom-sm-16
+                    .icon.mr-2
+                        img(src="", alt="")
+                    p.name.m-0.font-size-sm-16.steel-text By Enam Agbozo 
+
+            .read-more.mt-4
+                a.clear-blue-text.font-size-sm-16.d-flex.align-items-center.font-weight-sm-500(href="/blog-details.html")
+                    span.d-block.mr-1 Read more
+                    i.material-icons.font-size-sm-16 arrow_forward

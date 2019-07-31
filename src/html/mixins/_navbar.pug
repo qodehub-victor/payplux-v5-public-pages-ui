@@ -39,9 +39,9 @@ mixin navbar()
             //- table screen login and get started
             ul.navbar-nav.align-items-center.ml-auto.d-none.d-md-flex.d-lg-none.flex-row.mr-3
                 li.nav-item.login.mr-4
-                    a.nav-link.clear-blue-text.font-weight-sm-500(href= "") Login 
+                    a.nav-link.clear-blue-text.font-weight-sm-500(href= "/login") Login 
                 li.nav-item
-                    a.btn.button.button-sm-32.button-lg-48.get-started-button Get Started
+                    a.btn.button.button-sm-32.button-lg-48.get-started-button(href= "/signup") Get Started
 
             //- buttons to collapse navbar
             button.navbar-toggler.ml-3.collapsed(type="button", data-toggle="collapse" data-target="#navigation" aria-controls="navigation")
